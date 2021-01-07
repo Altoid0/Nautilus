@@ -5,9 +5,10 @@ plugins {
 	id 'application'
 }
 
+group = 'com.nautilus'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
-mainClassName = 'NautilusApplication'
+mainClassName = 'com.nautilus.NautilusApplication'
 
 configurations {
 	compileOnly {

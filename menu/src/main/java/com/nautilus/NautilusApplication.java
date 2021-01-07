@@ -1,4 +1,4 @@
-//package com.example.Nautilus;
+package com.nautilus;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
