@@ -22,16 +22,16 @@ Name | Grade | Reasoning
 ------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------
 Gautam | 5/5 | I researched on how to use a [parallax effect on HTML](https://www.w3schools.com/howto/howto_css_parallax.asp) and how to use [CSS to create a transparency affect](https://www.w3schools.com/css/css_image_transparency.asp). I implemented a basic idea of the parallax effect and the transparency effect on a [test HTML page](https://github.com/Altoid0/Nautilus/blob/master/main/src/static/mainpage.html). I also researched on how to create a ToDo app in [Java using DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/CodeSamples.Java.html).  
 Dhruv S | 5/5 | I made the website for the weather app and polished the code for the weather function of the project. I am also working hard to integrate the java file with the html file so that you can see the output of the function on the website. Researched heavily on [HTMl](https://youtu.be/PlxWf493en4) and [CSS](https://youtu.be/0afZj1G0BIE).
-Tanay | 5/5 | 
+Tanay | 5/5 | I researched and implemented the [base gradle project structure](https://stackoverflow.com/questions/30041281/intellij-idea-and-gradle-projects#:~:text=With%20Intellij%2014%20you%20can,change%20something%20in%20the%20build). On top of this, I added support for [multi-project builds using gradle](https://docs.gradle.org/current/samples/sample_building_java_applications_multi_project.html). I also integrated google calendar event getter using Google API's. I troubleshooted and fixed the spring boot installation so now we can serve web content. [Supplemental link 1](https://docs.gradle.org/current/userguide/intro_multi_project_builds.html) (Multi project using gradle) and [Supplemental link 2](https://docs.gradle.org/current/userguide/multi_project_builds.html) (multiple project build)
 Dhruv K | 5/5 | I researched more on [database construction](https://riak.com/resources/nosql-databases/index.html?p=9937.html) with NoSQL databases such as [DynamoDB](https://spring.io/guides/gs/multi-module/) and how the back end of the project would work in conjunction with the [API calls and storing JSON data](https://github.com/Altoid0/Nautilus/blob/master/src/ApiStoreSend.java). I also figured out to parse an API call with java and format it in a way that is easy and simple to use and send it to the database when necessary. 
 
 ## Wk 4 - Teacher Scores (given on day of presentation)
 Name | Grade
 -------- | -------
 Gautam | 9/10 
-Dhruv S | 10/10
-Tanay | 9/10
-Dhruv K | 9/10
+Dhruv S | 10/10 
+Tanay | 9/10 
+Dhruv K | 9/10 
 
 ## Wk 4 - Peer Score
 Name | Grade | Reasoning
@@ -42,7 +42,7 @@ Tanay | 10/10 | Tanay has been putting a lot of work into the Google Calendar in
 Dhruv K | 10/10 | Dhruv K worked hard on spring integration and setup DynamoDB for the rest of the team. He worked hard with the rest of the team also and guided the rest of us through DynamoDB.
 
 ## Scrum Board
-We are monitoring and updating tasks that we have to do, are doing, and are done with in the [Scrum Board in GitHub](https://github.com/Altoid0/MorningBrief/projects/1)  
+We are monitoring and updating tasks that we have to do, are doing, and are done with in the [Scrum Board in GitHub](https://github.com/Altoid0/Nautilus/projects/1)  
 
 ## Project Plan
 Here is our detailed project plan for our project: [P1 JoeCode Project Plan](https://docs.google.com/document/d/1m7wAU9ol465JiQeQv9NltoqsjlFo8B8UNO8IeDBx2rU/edit?usp=sharing)  
