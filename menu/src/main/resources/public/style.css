@@ -1,13 +1,14 @@
-<style>
 .color-overlay h1 {
-  text-align: center;
   font-size: 6rem;
   font-family: "Cookie";
   padding: 20px;
   margin: 15px;
   z-index: 1;
   opacity: 1.4;
-  color: black;
+
+}
+h1 {
+    text-align: center;
 }
 .section h2 {
     position: relative;
@@ -33,7 +34,7 @@ body, html {
 
   /* Full height */
   height: 200%;
-  width: 110%;
+  width: 100%;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -41,4 +42,3 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-</style>
