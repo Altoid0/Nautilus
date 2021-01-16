@@ -38,7 +38,7 @@ Goals Completed this Week:
 4) Open the folder in IntelliJ
 5) Once opened navigate to the top right to add a build configuration
 6) Click the plus sign in the top left of the new run configuration window that opened, and then click gradle  
-![](https://github.com/Altoid0/Nautilus/blob/menu/src/main/resources/public/Tanay_RunGuide.png)  
+![](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/public/Tanay_RunGuide.png)  
 7) Click the folder icon on the left and then select the `Calendar` project as seen in the screenshot above
 8) In the "tasks" bar enter the word "run" without the quotes and finally click ok in the lower right. You should be able to now click the green run button in intellij to run the desired mini project. Repeat the run configuration steps for every project you wish to run.  
 
