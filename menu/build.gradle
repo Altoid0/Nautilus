@@ -26,8 +26,17 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf'
+	implementation platform('com.amazonaws:aws-java-sdk-bom:1.11.X')
+	compile 'com.amazonaws:aws-java-sdk-core:1.9.13'
+	compile 'com.amazonaws:aws-java-sdk:1.9.13'
+	compile 'com.amazonaws:aws-java-sdk-dynamodb:1.9.13'
+
+
+	testCompile group: 'junit', name: 'junit', version: '4.+'
 }
+
 
 test {
 	useJUnitPlatform()
+	testLogging.showStandardStreams = true
 }
