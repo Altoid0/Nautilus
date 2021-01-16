@@ -1,4 +1,3 @@
-package Weather.Java;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,9 +6,6 @@ import java.net.URLConnection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 
 
 
@@ -17,12 +13,9 @@ import com.google.gson.*;
 import com.google.gson.reflect.*;
 
 
-//application
-@SpringBootApplication
+
 
 public class Weather {
-    @RequestMapping(value = "/weather")
-
 
     public static void WeatherCheck(String[] args) {
         Scanner rps = new Scanner(System.in);
@@ -52,11 +45,6 @@ public class Weather {
             Map<String, Object> rainMap = jsonToMap(respMap.get("rain").toString());
             Map<String, Object> sysMap = jsonToMap(respMap.get("sys").toString());
 
-            String current_temp = mainMap.get("temp");'
-            String feels_temp = mainMap.get("feels_like");
-            String forecast = mainMap.get("description");
-            String max_temp = mainMap.get("temp_max");
-
 //add min max temps, and sunrise sunset
             System.out.println("Current Temperature in " + userInput + ": " + mainMap.get("temp"));
             System.out.println("Feels like " + mainMap.get("feels_like") + "in " + userInput);
@@ -71,9 +59,6 @@ public class Weather {
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
-        }
-        public String index() {
-            return "index";
         }
 
 
