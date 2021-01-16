@@ -9,49 +9,64 @@ Tanay Shah | [@Altoid0](https://github.com/Altoid0) | [Tanay & Dhruv S Journal](
 Dhruv Kanetkar | [@DhruvK0](https://github.com/DhruvK0) | [Gautam & Dhruv K Journal](https://docs.google.com/document/d/1tCDVj-Cb-zR5BkXZF6V9x2aPzR__5qMSUu2iNDu2oko/edit?usp=sharing)
 Dhruv Sengupta | [@DaHippoBear](https://github.com/DaHippoBear) | [Tanay & Dhruv S Journal](https://docs.google.com/document/d/1g60S7gscwpYl4oalQHzpsQa1RahPRVd42iXyDRPMrnE/edit?usp=sharing)
 
-# Wk 4 Total Grades
-Name | Grade
--------- | -------
-Gautam | 24/25  
-Dhruv S | 25/25
-Tanay | 24/25
-Dhruv K | 24/25
-
-## Wk 4 - Individual Grades
-Name | Grade | Reasoning
-------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------
-Gautam | 5/5 | I researched on how to use a [parallax effect on HTML](https://www.w3schools.com/howto/howto_css_parallax.asp) and how to use [CSS to create a transparency affect](https://www.w3schools.com/css/css_image_transparency.asp). I implemented a basic idea of the parallax effect and the transparency effect on a [test HTML page](https://github.com/Altoid0/Nautilus/blob/master/main/src/static/mainpage.html). I also researched on how to create a ToDo app in [Java using DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/CodeSamples.Java.html).  
-Dhruv S | 5/5 | I made the website for the weather app and polished the code for the weather function of the project. I am also working hard to integrate the java file with the html file so that you can see the output of the function on the website. Researched heavily on [HTMl](https://youtu.be/PlxWf493en4) and [CSS](https://youtu.be/0afZj1G0BIE).
-Tanay | 5/5 | I researched and implemented the [base gradle project structure](https://stackoverflow.com/questions/30041281/intellij-idea-and-gradle-projects#:~:text=With%20Intellij%2014%20you%20can,change%20something%20in%20the%20build). On top of this, I added support for [multi-project builds using gradle](https://docs.gradle.org/current/samples/sample_building_java_applications_multi_project.html). I also integrated google calendar event getter using Google API's. I troubleshooted and fixed the spring boot installation so now we can serve web content. [Supplemental link 1](https://docs.gradle.org/current/userguide/intro_multi_project_builds.html) (Multi project using gradle) and [Supplemental link 2](https://docs.gradle.org/current/userguide/multi_project_builds.html) (multiple project build)
-Dhruv K | 5/5 | I researched more on [database construction](https://riak.com/resources/nosql-databases/index.html?p=9937.html) with NoSQL databases such as [DynamoDB](https://spring.io/guides/gs/multi-module/) and how the back end of the project would work in conjunction with the [API calls and storing JSON data](https://github.com/Altoid0/Nautilus/blob/master/src/ApiStoreSend.java). I also figured out to parse an API call with java and format it in a way that is easy and simple to use and send it to the database when necessary. 
-
-## Wk 4 - Teacher Scores (given on day of presentation)
-Name | Grade
--------- | -------
-Gautam | 9/10 
-Dhruv S | 10/10 
-Tanay | 9/10 
-Dhruv K | 9/10 
-
-## Wk 4 - Peer Score
-Name | Grade | Reasoning
---------- | ------- | ----------------------------------------
-Gautam | 10/10 | I have been putting in a lot of time into learning HTML and CSS and creating the base website that will create the entire project. I have also been testing out how to use DynamoDB to make the ToDo app by using instructions from Dhruv on DynamoDB. I am also maintaining the GitHub of the project and making sure that accurate version control is being done and making sure that the project board is up to date. 
-Dhruv S | 10/10 | Dhruv S has worked really hard on the weather app and is almost done to being done. Along with coding and working on getting the API calls correct, he has also been working on the website for the weather project, which is really good progress
-Tanay | 10/10 | Tanay has been putting a lot of work into the Google Calendar integration. It was a hard task that he got through excellently. He also build the entire file structure in gradle and he figured out to aggregate multiple build into one central project.
-Dhruv K | 10/10 | Dhruv K worked hard on spring integration and setup DynamoDB for the rest of the team. He worked hard with the rest of the team also and guided the rest of us through DynamoDB.
-
 ## Scrum Board
 We are monitoring and updating tasks that we have to do, are doing, and are done with in the [Scrum Board in GitHub](https://github.com/Altoid0/Nautilus/projects/1)  
+**Note: Link to code is in the comments for each card. Click on `Go to issue for full details` and scroll down to see the comments for each card**  
 
-## Project Plan
+# Wk 5 Grading:
+
+## Wk 5 - Total Grades
+Name | Grade
+-------- | -------
+JoeCode | 20/20  
+
+## Wk 5 - Scrum Master Grading
+[Scrum Board in GitHub](https://github.com/Altoid0/Nautilus/projects/1)  
+- All items that we did this week are under the 'Done' column, with the person assigned having completed the item  
+
+Goals Completed this Week:  
+1) Version 1 of Main webpage
+2) Calendar app is ready, just needs HTML  
+3) Added more parameters to weather app  
+4) Added Thyme integration for HTML  
+
+## Wk 5 - Guidance for Running & Reviewing Code
+<u>Running Tanay's Code Steps:</u> 
+1) First download the latest Gradle release https://gradle.org/releases/
+2) Next follow the steps to manually install Gradle https://gradle.org/install/
+3) Next, clone our project using `git clone https://github.com/Altoid0/Nautilus.git`
+4) Open the folder in IntelliJ
+5) Once opened navigate to the top right to add a build configuration
+6) Click the plus sign in the top left of the new run configuration window that opened, and then click gradle  
+![](https://github.com/Altoid0/Nautilus/blob/menu/src/main/resources/public/Tanay_RunGuide.png)  
+7) Click the folder icon on the left and then select the `Calendar` project as seen in the screenshot above
+8) In the "tasks" bar enter the word "run" without the quotes and finally click ok in the lower right. You should be able to now click the green run button in intellij to run the desired mini project. Repeat the run configuration steps for every project you wish to run.  
+
+<u>Running Gautam's Code Steps</u>:
+1) Navigate to the cloned project
+2) Go into `Nautilus/menu/src/main/resources/public`
+3) Open index.html in a web browser  
+
+*Make sure that main.css is in the same directory as index.html*
+
+<u>Running Dhruv S's Code Steps</u>:
+1) Open the main page (index.html)
+2) On the `Weather` card, click on `Run`
+
+<u>Running Dhruv K's Code Steps</u>:  
+1) First download the latest Gradle release https://gradle.org/releases/
+2) Next follow the steps to manually install Gradle https://gradle.org/install/
+3) Next, clone our project using `git clone https://github.com/Altoid0/Nautilus.git`
+4) Open the folder in IntelliJ
+5) Click on folder icon and select `Edit Configurations` and then select the `+` on the top left corner and click on `Gradle`. In the main panel on the right corner, click the folder with the blue square icon and select the `:weather` build file
+6) In the taskbar, type `run`. Click `Ok` then press the `Run` button on the top right 
+
+Build should be successful and data should be loaded
+
+# Project Plan
 Here is our detailed project plan for our project: [P1 JoeCode Project Plan](https://docs.google.com/document/d/1m7wAU9ol465JiQeQv9NltoqsjlFo8B8UNO8IeDBx2rU/edit?usp=sharing)  
 
-### Visualization of Project Features
-Here is a visualization of the project features we hope to add: 
-![](https://github.com/Altoid0/MorningBrief/blob/master/assets/Project%20Ideas.png)
-
-### Project Features
+# Project Features
 Feature | Description
 ------- | ---------------------------------------
 Weather Trends | - Tells temperature  <br>- Tells weather type (rainy, sunny, etc)<br>  - Chance of precipitation<br>  - Forecast for next couple days (might not add)<br>  
