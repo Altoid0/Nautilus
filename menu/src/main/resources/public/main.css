@@ -14,6 +14,7 @@ body {
     flex-wrap: wrap;
     min-height: 100vh;
     background: #232427;
+/*    background-image: url('beach.jpg');*/
 }
 
 .main-content {
@@ -21,19 +22,55 @@ body {
     text-align: center;
 }
 
-.main-content h1 {
+/*.gradient-text {
     position: relative;
     font-size: 8em;
     color: #FFB703;
+}*/
+
+.gradient-text {
+    font-size: 8em;
+    background-color: #023047;
+    background-image: linear-gradient(180deg, #fff, #219EBC);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    width: 200%;
 }
 
 .main-content h2 {
     position: relative;
     font-size: 1.5em;
-    color: #FB8500;
+/*    color: #FB8500;*/
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 21%;
+    margin-left: 21%;
+    background-color: #FFB703;
+    background-image: linear-gradient(180deg, #8ECAE6, #FB8500);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+/*.gradient-desc {
+    position: relative;
     text-align: center;
     margin: 40px;
-}
+    font-size: 1.5em;
+    background-color: #FFB703;
+    background-image: linear-gradient(45deg, #FFB703, #FB8500);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}*/
 
 .container {
     display: flex;
@@ -53,7 +90,7 @@ body {
                 inset -5px -5px 15px rgba(255,255,255,0,1),
                 5px 5px 15px rgba(0,0,0,0,0.3);
     border-radius: 15px;
-    margin: 30px;
+    margin: 40px;
 }
 
 .container .card .box {
@@ -87,7 +124,7 @@ body {
     transform: translateY(-50px);
     border: 0px;
     border-radius: 20px;
-    box-shadow: 0 40px 70px #FB8500;
+    box-shadow: 0 0 70px 30px #023047;
 }
 
 .container .card .box .content {
@@ -139,21 +176,21 @@ body {
 }
 
 .container .card:nth-child(1) .box .content a {
-    background: #FFB703;
+    background: #219EBC;
 }
 
 .container .card:nth-child(2) .box .content a {
-    background: #FFB703;
+    background: #219EBC;
 }
 
 .container .card:nth-child(3) .box .content a {
-    background: #FFB703;
+    background: #219EBC;
 }
 
 .container .card:nth-child(4) .box .content a {
-    background: #FFB703;
+    background: #219EBC;
 }
 
 .container .card:nth-child(5) .box .content a {
-    background: #FFB703;
+    background: #219EBC;
 }
