@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
+group = 'com.weather'
 mainClassName = 'Weather'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
