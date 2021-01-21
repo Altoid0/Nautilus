@@ -19,7 +19,7 @@ public class NautilusApplication {
 	}
 
 	public static void main(String[] args) throws IOException, GeneralSecurityException {
-		CalendarRequest.main();
+		//CalendarRequest.main();
 		SpringApplication.run(NautilusApplication.class, args);
 	}
 }
