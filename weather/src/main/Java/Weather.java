@@ -1,14 +1,19 @@
-import com.weather.ApiCall;
+
+
+
+import java.util.*;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+@Controller
 
 
 
 public class Weather {
 
-        @RequestMapping(value ="/weather")
+        @GetMapping("/weather_files")
+
         public String currentTemp (Model model) {
             ApiCall test = new ApiCall("Los Angeles");
             String current_temp = test.returnCurrent().toString();
