@@ -1,10 +1,12 @@
 import com.weather.ApiCall;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 
 public class Weather {
-    public static void main(String[] args) {
-
 
         @RequestMapping(value ="/weather")
         public String currentTemp (Model model) {
@@ -18,8 +20,5 @@ public class Weather {
         }
 
 
-
-
-    }
 }
 
