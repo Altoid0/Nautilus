@@ -18,8 +18,6 @@
 //}
 import com.weather.ApiCall;
 
-
-
 public class Weather {
     public static void main(String[] args) {
         ApiCall test = new ApiCall("Los Angeles");

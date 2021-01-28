@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.sql.Driver;
 
-//@Controller
 @SpringBootApplication
 public class NautilusApplication {
 	@RequestMapping(value = "/index")
