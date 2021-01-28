@@ -13,55 +13,18 @@ Dhruv Sengupta | [@DaHippoBear](https://github.com/DaHippoBear) | [Tanay & Dhruv
 We are monitoring and updating tasks that we have to do, are doing, and are done with in the [Scrum Board in GitHub](https://github.com/Altoid0/Nautilus/projects/1)  
 **Note: Link to code is in the comments for each card. Click on `Go to issue for full details` and scroll down to see the comments for each card**  
 
-# Wk 5 Grading:
+# Wk 6 README Update:
+Requirement from MC | Who Presented It | What We Did
+----------------------------------------- | ----------- | --------------------------------------------------------------------------
+Live Demo of Running Code: <br><br> -Create new IntelliJ workspace through VCS <br><br> -Start or Configure events or technicals running | Tanay | Tanay opened up Google Calendar to show Mr. M how when we make a new calendar event in IntelliJ. He then cloned the project and opened it up in IntelliJ. <br> <br> Tanay set up the configurations for all 3 apps and ran the weather app to show Mr. M the calendar even got created and how it showed up on the terminal after Tanay ran the project.  
+Wow of Project, ie Event Action or a Keys of System: <br><br> Show technicals running, talk of event, actions, or technicals and how it impacts UI | Tanay, Dhruv K, & Gautam | Tanay ran all 3 projects to show Mr. M how all three of the projects work and how they are running. <br><br> Dhruv K talked about how the three projects work in general while Tanay pulled up the actual code so that Dhruv K could guide Mr. M towards the actual code that he talked about. <br><br> Dhruv K showed how the Weather app uses ThymeLeaf and API calls to get the weather data from an outside source and then displays it on the Weather.html page that is linked to the homepage. <br><br> Gautam talked about how the weather app’s need to get the user’s location requires a new textbook that will take user input and use that location to get the location from a separate API  
+Code review of key parts: <br><br> -MVC design, Events, Inheritance, Career elements, and key CSA units #1 through #10 usage | Dhruv S | Dhruv S showed Mr. M how we used a unique project structure to have multiple build.gradle files running at once because of the needs of our project and how we managed to run 3 build.gradle files at once, which are all called at the same time. <br><br> Dhruv S talked about the units we hope to add in the future, which include loops and if/else statements to make our code more efficient.  
+Talk about key learning you see for Wow in next 6 weeks, or morph you may need to do provide guide for Teacher review | Dhruv K and Gautam | Dhruv K talked about how our key learning for this project so far was how to use gradle, DynamoDB, Spring Boot, and HTML/CSS and how we hope to improve on those topics in the future and become more familiar with and use more advanced code in future commits. <br><br> Gautam provided guide via README update  
+Planning Process: <br><br> -Showing code update on IntelliJ <br><br> -Show Git commit, Git push, and Master merge <br><br> -How Process of start work item (create issue or ticket) | Tanay and Gautam | This part was skipped out of the presentation due to time but Tanay should have shown an example of code being done, being committed/pushed to github and Mr. M would pull that code. <br><br> Gautam showed Mr. M how we create issues for our project and how we add variables to our issues such as: assignment, project, submission, and links to commits/code links. 
 
-## Wk 5 - Total Grades
-Name | Grade
--------- | -------
-JoeCode | 20/20  
 
-## Wk 5 - Scrum Master Grading
-[Scrum Board in GitHub](https://github.com/Altoid0/Nautilus/projects/1)  
-- All items that we did this week are under the 'Done' column, with the person assigned having completed the item  
 
-Goals Completed this Week:  
-1) Version 1 of Main webpage
-2) Calendar app is ready, just needs HTML  
-3) Added more parameters to weather app  
-4) Added Thyme integration for HTML  
 
-## Wk 5 - Guidance for Running & Reviewing Code
-<u>Running Tanay's Code Steps:</u> 
-1) First download the latest Gradle release https://gradle.org/releases/
-2) Next follow the steps to manually install Gradle https://gradle.org/install/
-3) Next, clone our project using `git clone https://github.com/Altoid0/Nautilus.git`
-4) Open the folder in IntelliJ
-5) Once opened navigate to the top right to add a build configuration
-6) Click the plus sign in the top left of the new run configuration window that opened, and then click gradle  
-![](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/public/Tanay_RunGuide.png)  
-7) Click the folder icon on the left and then select the `Calendar` project as seen in the screenshot above
-8) In the "tasks" bar enter the word "run" without the quotes and finally click ok in the lower right. You should be able to now click the green run button in intellij to run the desired mini project. Repeat the run configuration steps for every project you wish to run.  
-
-<u>Running Gautam's Code Steps</u>:
-1) Navigate to the cloned project
-2) Go into `Nautilus/menu/src/main/resources/public`
-3) Open index.html in a web browser  
-
-*Make sure that main.css is in the same directory as index.html*
-
-<u>Running Dhruv S's Code Steps</u>:
-1) Open the main page (index.html)
-2) On the `Weather` card, click on `Run`
-
-<u>Running Dhruv K's Code Steps</u>:  
-1) First download the latest Gradle release https://gradle.org/releases/
-2) Next follow the steps to manually install Gradle https://gradle.org/install/
-3) Next, clone our project using `git clone https://github.com/Altoid0/Nautilus.git`
-4) Open the folder in IntelliJ
-5) Click on folder icon and select `Edit Configurations` and then select the `+` on the top left corner and click on `Gradle`. In the main panel on the right corner, click the folder with the blue square icon and select the `:weather` build file
-6) In the taskbar, type `run`. Click `Ok` then press the `Run` button on the top right 
-
-Build should be successful and data should be loaded
 
 # Project Plan
 Here is our detailed project plan for our project: [P1 JoeCode Project Plan](https://docs.google.com/document/d/1m7wAU9ol465JiQeQv9NltoqsjlFo8B8UNO8IeDBx2rU/edit?usp=sharing)  
