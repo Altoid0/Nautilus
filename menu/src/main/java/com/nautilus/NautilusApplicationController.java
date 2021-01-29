@@ -21,6 +21,7 @@ public class NautilusApplicationController {
     @GetMapping("/weather")
     public String weather(@RequestParam(name="location", required = true, defaultValue = "San Diego") String location, Model model) {
         ApiCall test = new ApiCall(location);
+        model.addAttribute("location", location);
         return "weather";
     }
 }
