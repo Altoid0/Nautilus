@@ -1,12 +1,10 @@
 package com.nautilus;
 
+import com.weather.ApiCall;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import com.weather.ApiCall;
-
 
 import java.io.IOException;
 import java.net.URI;
