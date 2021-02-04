@@ -41,8 +41,11 @@
       <p><a href="#"></a></p>
     </div>
     <div class="col-sm-8 text-left">
-
-      <p th:text = "${current_temp}"><c></c></p>
+      <form action="/weather" method="GET" id="weatherForm">
+        <label for="weatherField">Enter the City</label>
+        <input name="location" id="weatherField" type="text">
+      </form>
+      <p th:text = "${location}">Location</p>
       <p th:text ="${feels_like}"></p>
       <p th:text ="${forecast}"></p>
       <p th:text ="${max_temp}"></p>
