@@ -1,4 +1,4 @@
-package com.weather;
+package com.nautilus;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
