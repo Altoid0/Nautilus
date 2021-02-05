@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel ="stylesheet" href="weather.css">
+<link rel ="stylesheet" href="css/weather.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -44,17 +44,15 @@
       <form action="/weather" method="GET" id="weatherForm">
         <label for="weatherField">Enter the City</label>
         <input name="location" id="weatherField" type="text">
+        <button>Go!</button>
+        <p th:text = "'Location: ' + ${location}"></p>
+        <p th:text ="'The Temperature Feels Like: ' + ${feels_temp}"></p>
+        <p th:text ="'The Forecast is: ' +${forecast}"></p>
+        <p th:text ="'The Max Temperature is: ' +${max_temp}"></p>
+        <p th:text ="'The Min Temperature is: ' +${min_temp}"></p>
+        <p th:text ="'The Time of Sunrise is: ' +${sunrise}"></p>
+        <p th:text ="'The Time of Sunset is: ' +${sunset}"></p>
       </form>
-      <p th:text = "${location}">Location</p>
-      <p th:text ="${feels_like}"></p>
-      <p th:text ="${forecast}"></p>
-      <p th:text ="${max_temp}"></p>
-      <p th:text ="${min_temp}"></p>
-      <p th:text ="${sunrise}"></p>
-      <p th:text ="${sunset}"></p>
-
-<p th:text></p>
-
     </div>
     <div class="col-sm-2 sidenav">
     </div>
