@@ -5,10 +5,10 @@ plugins {
     id 'application'
 }
 
-group = 'com.weather'
-mainClassName = 'Weather'
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+group = 'com.weathercall'
+mainClassName = 'com.weathercall.Weather'
+sourceCompatibility = 11
+targetCompatibility = 11
 version = '1.0'
 
 repositories {

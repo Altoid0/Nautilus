@@ -33,7 +33,6 @@ dependencies {
 	compile project(':calendar')
 	compile project(':weather')
 
-
 	testCompile group: 'junit', name: 'junit', version: '4.+'
 }
 
