@@ -9,9 +9,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.*;
+import java.time.*;
 
 public class ApiCall {
     private String url_string;
@@ -21,7 +24,9 @@ public class ApiCall {
     private Object max_temp;
     private Object min_temp;
     private Object sunrise;
+    private Object sunrise_fin;
     private Object sunset;
+    private Object sunset_fin;
     private Object humidity;
 
 
@@ -60,8 +65,17 @@ public class ApiCall {
             forecast = weatherMap.get("description");
             max_temp = mainMap.get("temp_max");
             min_temp = mainMap.get("temp_min");
+
             sunrise = sysMap.get("sunrise");
+            //convert sunrise epoch to readable time
+            sunrise_fin =   new java.util.Date((long)sunrise);
+            System.out.println(sunrise_fin);
+
             sunset = sysMap.get("sunrise");
+            //convert sunset epoch to readable time
+
+            sunset_fin =   new java.util.Date((long)sunset);
+            System.out.println(sunset_fin);
             humidity = mainMap.get("humidity");
 
         } catch (IOException e) {
@@ -90,11 +104,11 @@ public class ApiCall {
     }
 
     public Object returnSunrise() {
-        return sunrise;
+        return sunrise_fin;
     }
 
     public Object returnSunset() {
-        return sunset;
+        return sunset_fin;
     }
 
     public Object returnHumidity() {
