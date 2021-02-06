@@ -10,7 +10,7 @@ Dhruv Kanetkar | [@DhruvK0](https://github.com/DhruvK0) | [Gautam & Dhruv K Jour
 Dhruv Sengupta | [@DaHippoBear](https://github.com/DaHippoBear) | [Tanay & Dhruv S Journal](https://docs.google.com/document/d/1g60S7gscwpYl4oalQHzpsQa1RahPRVd42iXyDRPMrnE/edit?usp=sharing)
 
 
-##Project Site
+## Project Site
 Our project is live and operational at this link: [Nautilus](http://76.176.51.196/)
 
 ## Scrum Board
