@@ -9,22 +9,21 @@ Tanay Shah | [@Altoid0](https://github.com/Altoid0) | [Tanay & Dhruv S Journal](
 Dhruv Kanetkar | [@DhruvK0](https://github.com/DhruvK0) | [Gautam & Dhruv K Journal](https://docs.google.com/document/d/1tCDVj-Cb-zR5BkXZF6V9x2aPzR__5qMSUu2iNDu2oko/edit?usp=sharing)
 Dhruv Sengupta | [@DaHippoBear](https://github.com/DaHippoBear) | [Tanay & Dhruv S Journal](https://docs.google.com/document/d/1g60S7gscwpYl4oalQHzpsQa1RahPRVd42iXyDRPMrnE/edit?usp=sharing)
 
+
+## Project Site
+Our project is live and operational at this link: [Nautilus](http://76.176.51.196/)
+
 ## Scrum Board
 We are monitoring and updating tasks that we have to do, are doing, and are done with in the [Scrum Board in GitHub](https://github.com/Altoid0/Nautilus/projects/1)  
 **Note: Link to code is in the comments for each card. Click on `Go to issue for full details` and scroll down to see the comments for each card**  
 
-# Wk 6 README Update:
-Requirement from MC | Who Presented It | What We Did
------------------------------------------ | ----------- | --------------------------------------------------------------------------
-Live Demo of Running Code: <br><br> -Create new IntelliJ workspace through VCS <br><br> -Start or Configure events or technicals running | Tanay | Tanay opened up Google Calendar to show Mr. M how when we make a new calendar event in IntelliJ. He then cloned the project and opened it up in IntelliJ. <br> <br> Tanay set up the configurations for all 3 apps and ran the weather app to show Mr. M the calendar even got created and how it showed up on the terminal after Tanay ran the project.  
-Wow of Project, ie Event Action or a Keys of System: <br><br> Show technicals running, talk of event, actions, or technicals and how it impacts UI | Tanay, Dhruv K, & Gautam | Tanay ran all 3 projects to show Mr. M how all three of the projects work and how they are running. <br><br> Dhruv K talked about how the three projects work in general while Tanay pulled up the actual code so that Dhruv K could guide Mr. M towards the actual code that he talked about. <br><br> Dhruv K showed how the Weather app uses ThymeLeaf and API calls to get the weather data from an outside source and then displays it on the Weather page that is linked to the homepage. <br><br> Gautam talked about how the weather app’s need to get the user’s location requires a new textbook that will take user input and use that location to get the location from a separate API  
-Code review of key parts: <br><br> -MVC design, Events, Inheritance, Career elements, and key CSA units #1 through #10 usage | Dhruv S | Dhruv S showed Mr. M how we used a unique project structure to have multiple build.gradle files running at once because of the needs of our project and how we managed to run 3 build.gradle files at once, which are all called at the same time. <br><br> Dhruv S talked about the units we hope to add in the future, which include loops and if/else statements to make our code more efficient.  
-Talk about key learning you see for Wow in next 6 weeks, or morph you may need to do provide guide for Teacher review | Dhruv K and Gautam | Dhruv K talked about how our key learning for this project so far was how to use gradle, DynamoDB, Spring Boot, and HTML/CSS and how we hope to improve on those topics in the future and become more familiar with and use more advanced code in future commits. <br><br> Gautam provided guide via README update  
-Planning Process: <br><br> -Showing code update on IntelliJ <br><br> -Show Git commit, Git push, and Master merge <br><br> -How Process of start work item (create issue or ticket) | Tanay and Gautam | This part was skipped out of the presentation due to time but Tanay should have shown an example of code being done, being committed/pushed to github and Mr. M would pull that code. <br><br> Gautam showed Mr. M how we create issues for our project and how we add variables to our issues such as: assignment, project, submission, and links to commits/code links. 
-
-
-
-
+# Wk 8 README Update:
+Issue | Who Did It | What We Did | Code Link
+----------------------------------------- | ----------- | -------------------------------------------------------------------------- | ---------------------------------------------
+[Compile project to Jar](https://github.com/Altoid0/Nautilus/issues/22) | Tanay | Worked on fixing any compilation errors such as weather import and deployed compiled jar to devops environment running on homeserver | [Code Link](https://github.com/Altoid0/Nautilus/releases/tag/2.0.0)
+[Create backend endpoint for spring](https://github.com/Altoid0/Nautilus/issues/4) | Dhruv K | Worked on making sure that the directory pathing and the route to /weather would work properly, and making sure that the add atribute would connect to the right variable in thymeleaf | [Code Link](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java)
+[Touch up weather html](https://github.com/Altoid0/Nautilus/issues/14) | Gautam | Worked on adding the weather HTML inputs and the CSS so that the weather API has somewhere to output to | [Code Link](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/weather.html)
+[Integrate Thyme HTML with website](https://github.com/Altoid0/Nautilus/issues/12) | Dhruv S | Worked on adding thyme integration into the HTML and worked on the backend of thyme leaf so that the code knows how to input, get, and output the info from weather api | [Code Link](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/public/weather.html#L48)
 
 # Project Plan
 Here is our detailed project plan for our project: [P1 JoeCode Project Plan](https://docs.google.com/document/d/1m7wAU9ol465JiQeQv9NltoqsjlFo8B8UNO8IeDBx2rU/edit?usp=sharing)  
