@@ -1,4 +1,2 @@
 rootProject.name = 'Nautilus'
-include('menu', 'calendar', 'weather')
-include 'todo'
-
+include('menu', 'calendar', 'weather', 'todo', 'stocks')
