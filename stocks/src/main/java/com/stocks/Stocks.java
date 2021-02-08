@@ -1,5 +1,6 @@
 package com.stocks;
 
+<<<<<<< HEAD:stocks/src/main/java/Stocks.java
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 
@@ -18,6 +19,8 @@ import java.time.*;
 
 
 
+=======
+>>>>>>> origin/master:stocks/src/main/java/com/stocks/Stocks.java
 public class Stocks {
     private String url_string;
     private Object stock_price;
