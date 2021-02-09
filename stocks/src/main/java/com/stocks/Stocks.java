@@ -39,6 +39,14 @@ public class Stocks {
                 result .append(line);
             }
             rd.close();
+
+            Map<String, Object> results = jsonToMap(result.toString());
+            Map<String, Object> mainMap = jsonToMap(respMap.get("main").toString());
+            ArrayList<Map<String,Object>> weathers = (ArrayList<Map<String, Object>>) respMap.get("weather");
+            Map<String, Object> weatherMap = weathers.get(0);
+            Map<String, Object> sysMap = jsonToMap(respMap.get("sys").toString());
+
+
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
