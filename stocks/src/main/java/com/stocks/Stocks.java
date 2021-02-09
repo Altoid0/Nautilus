@@ -1,12 +1,13 @@
 package com.stocks;
 
-import com.google.common.reflect.TypeToken;
-import com.google.gson.Gson;
+//import com.google.common.reflect.TypeToken;
+//import com.google.gson.Gson;
 
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.time.format.DateTimeFormatter;
@@ -26,7 +27,7 @@ public class Stocks {
 
     public Stocks(String ticker) {
         String API_Key = "QSnjRpHBcP7QcFMp2XEhk4GG1EYlJ9X1";
-        url_string = "https://api.polygon.io/v2/aggs/ticker/" + ticker "/range/1/day/2020-06-01/2020-06-17?apiKey="+ API_Key;
+        url_string = "https://api.polygon.io/v2/aggs/ticker/" + ticker + "/range/1/day/2020-06-01/2020-06-17?apiKey="+ API_Key;
 
         try {
             StringBuilder result = new StringBuilder();
@@ -38,14 +39,10 @@ public class Stocks {
                 result .append(line);
             }
             rd.close();
-
-            Map<String, Object> results = jsonToMap(result.toString());
-            Map<String, Object> mainMap = jsonToMap(respMap.get("main").toString());
-            ArrayList<Map<String,Object>> weathers = (ArrayList<Map<String, Object>>) respMap.get("weather");
-            Map<String, Object> weatherMap = weathers.get(0);
-            Map<String, Object> sysMap = jsonToMap(respMap.get("sys").toString());
-
-
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
