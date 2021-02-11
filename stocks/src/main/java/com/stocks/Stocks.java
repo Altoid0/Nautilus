@@ -4,6 +4,9 @@ package com.stocks;
 //import com.google.gson.Gson;
 
 
+import com.google.common.reflect.TypeToken;
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,8 +25,15 @@ import java.time.*;
 
 public class Stocks {
     private String url_string;
+    private Object ticker;
     private Object stock_price;
     private Object stock_val;
+    public static Map<String, Object> jsonToMap (String str) {
+        Map<String, Object> map = new Gson().fromJson (
+                str, new TypeToken<HashMap<String, Object>>() {}.getType()
+        );
+        return map;
+    }
 
     public Stocks(String ticker) {
         String API_Key = "QSnjRpHBcP7QcFMp2XEhk4GG1EYlJ9X1";
@@ -41,10 +51,12 @@ public class Stocks {
             rd.close();
 
             Map<String, Object> results = jsonToMap(result.toString());
-            Map<String, Object> mainMap = jsonToMap(respMap.get("main").toString());
-            ArrayList<Map<String,Object>> weathers = (ArrayList<Map<String, Object>>) respMap.get("weather");
+
+            ArrayList<Map<String,Object>> stock_data = (ArrayList<Map<String, Object>>) results.get("results");
             Map<String, Object> weatherMap = weathers.get(0);
-            Map<String, Object> sysMap = jsonToMap(respMap.get("sys").toString());
+            Map<String, Object> sysMap = jsonToMap(results.get("sys").toString());
+
+            ticker = results.get("ticker").toString();
 
 
         } catch (MalformedURLException e) {
