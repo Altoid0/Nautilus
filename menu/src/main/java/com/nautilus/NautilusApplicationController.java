@@ -23,4 +23,9 @@ public class NautilusApplicationController {
 
         return "weather";
     }
+    @GetMapping("/calendar")
+    public String calendar(Model model) {
+
+        return "calendar";
+    }
 }
