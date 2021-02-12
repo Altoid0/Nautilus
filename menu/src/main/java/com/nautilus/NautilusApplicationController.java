@@ -62,6 +62,9 @@ public class NautilusApplicationController {
                 if (start == null) {
                     start = event.getStart().getDate();
                 }
+                String evenSummary = event.getSummary();
+                DateTime eventStart = start;
+                String eventLocation = event.getLocation();
                 System.out.printf("%s (%s)\n", event.getSummary(), start);
             }
         }
