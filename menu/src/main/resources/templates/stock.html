@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel ="stylesheet" href="css/weather.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img src="Nautilus.png" alt = "Nautilus" style="width:50px;height:50px;">
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+            <p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+            <p><a href="#"></a></p>
+        </div>
+        <div class="col-sm-8 text-left">
+            <form action="/weather" method="GET" id="weatherForm">
+                <label for="weatherField">Enter the City</label>
+                <input name="location" id="weatherField" type="text">
+                <button>Go!</button>
+                <p th:text = "'Ticker: ' + ${ticker}"></p>
+                <p th:text ="'Current Price: ' + ${openStock}"></p>
+                <p th:text ="'Closed Price: ' +${closedStock}"></p>
+                <p th:text ="'Stock Price High: ' +${stockHi}"></p>
+                <p th:text ="'Stock Price Low: ' +${stockLo}"></p>
+                <p th:text ="'Previous Open Price: ' +${prevOpenStock}"></p>
+                <p th:text ="'Previous Close Price: ' +${prevClosedStock}"></p>
+                <p th:text ="'Previous Stock Price High ' +${prevStockHi}"></p>
+                <p th:text ="'Previous Stock Price Low ' +${prevStockLo}"></p>
+                <p th:text ="'Stock Percent Gain: ' +${percentGain}"></p>
+            </form>
+        </div>
+        <div class="col-sm-2 sidenav">
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

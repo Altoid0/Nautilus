@@ -32,6 +32,24 @@ public class NautilusApplicationController {
 
         return "weather";
     }
+
+    @GetMapping("/stock")
+    public String stock(@RequestParam(name="ticker", required=true, defaultValue = "GME") String ticker, Model model) {
+        StockEval test = new StockEval(ticker);
+        model.addAttribute("ticker", ticker);
+        model.addAttribute("openStock", test.returnOpenStock());
+        model.addAttribute("closedStock", test.returnClosedStock());
+        model.addAttribute("stockHi", test.returnStockHi());
+        model.addAttribute("stockLo", test.returnStockLo());
+        model.addAttribute("prevOpenStock", test.returnPrevOpenStock());
+        model.addAttribute("prevClosedStock", test.returnPrevClosedStock());
+        model.addAttribute("prevStockHi", test.returnPrevStockHi());
+        model.addAttribute("prevStockLo", test.returnPrevStockLo());
+        model.addAttribute("percentGain", test.returnStockGain());
+
+        return "stock";
+    }
+
     @GetMapping("/calendar")
     public String calendar(Model model) throws IOException, GeneralSecurityException {
         // Events returnedEvents = CalendarRequest.getEvents();
