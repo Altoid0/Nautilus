@@ -36,7 +36,9 @@ public class CalendarRequest {
 
     private static final List<String> SCOPES = Collections.singletonList(CalendarScopes.CALENDAR_READONLY);
     private static final String CREDENTIALS_FILE_PATH = "/credentials.json";
-
+    private String evenSummary;
+    private DateTime eventStart;
+    private String eventLocation;
 
 
 
@@ -95,7 +97,8 @@ public class CalendarRequest {
             }
         }
     }
-    public static Events getEvents(String... args) throws IOException, GeneralSecurityException {
+    public List<Event> getEvents(String... args) throws IOException, GeneralSecurityException {
+
         // Build a new authorized API client service.
         final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
         com.google.api.services.calendar.Calendar service = new com.google.api.services.calendar.Calendar.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
@@ -110,6 +113,23 @@ public class CalendarRequest {
                 .setOrderBy("startTime")
                 .setSingleEvents(true)
                 .execute();
-        return events;
+        List<Event> items = events.getItems();
+        if (items.isEmpty()) {
+            // System.out.println("No upcoming events found.");
+            return null;
+        } else {
+            // System.out.println("Upcoming events");
+            for (Event event : items) {
+                DateTime start = event.getStart().getDateTime();
+                if (start == null) {
+                    start = event.getStart().getDate();
+                }
+                evenSummary = event.getSummary();
+                eventStart = start;
+                eventLocation = event.getLocation();
+                // System.out.printf("%s (%s)\n", event.getSummary(), start);
+            }
+            return items;
+        }
     }
 }

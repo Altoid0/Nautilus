@@ -3,6 +3,7 @@ package com.nautilus;
 import com.calendar.CalendarRequest;
 import com.google.api.client.util.DateTime;
 import com.google.api.services.calendar.model.Event;
+import com.google.api.services.calendar.model.Events;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,7 +34,10 @@ public class NautilusApplicationController {
     }
     @GetMapping("/calendar")
     public String calendar(Model model) throws IOException, GeneralSecurityException {
-
+        // Events returnedEvents = CalendarRequest.getEvents();
+        CalendarRequest calendar = new CalendarRequest();
+        model.addAttribute("Events", calendar.getEvents());
+        /*
         List<Event> items = CalendarRequest.getEvents().getItems();
         if (items.isEmpty()) {
             System.out.println("No upcoming events found.");
@@ -50,6 +54,7 @@ public class NautilusApplicationController {
                 System.out.printf("%s (%s)\n", event.getSummary(), start);
             }
         }
+        */
         return "calendar";
     }
 }
