@@ -9,12 +9,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.*;
-import java.time.*;
 
 public class ApiCall {
     private String url_string;
@@ -24,18 +21,16 @@ public class ApiCall {
     private Object max_temp;
     private Object min_temp;
     private Object sunrise;
-    private Object sunrise_fin;
     private Object sunset;
-    private Object sunset_fin;
     private Object humidity;
 
 
     public static Map<String, Object> jsonToMap (String str) {
-       Map<String, Object> map = new Gson().fromJson (
-               str, new TypeToken<HashMap<String, Object>>() {}.getType()
+        Map<String, Object> map = new Gson().fromJson (
+                str, new TypeToken<HashMap<String, Object>>() {}.getType()
         );
         return map;
-   }
+    }
 
     public ApiCall(String location) {
         String API_KEY = "349925271f7fdbe982d6825f10c6a0c3";
@@ -65,17 +60,8 @@ public class ApiCall {
             forecast = weatherMap.get("description");
             max_temp = mainMap.get("temp_max");
             min_temp = mainMap.get("temp_min");
-
             sunrise = sysMap.get("sunrise");
-            //convert sunrise epoch to readable time
-            sunrise_fin =   new java.util.Date((long)sunrise);
-            System.out.println(sunrise_fin);
-
             sunset = sysMap.get("sunrise");
-            //convert sunset epoch to readable time
-
-            sunset_fin =   new java.util.Date((long)sunset);
-            System.out.println(sunset_fin);
             humidity = mainMap.get("humidity");
 
         } catch (IOException e) {
@@ -104,11 +90,11 @@ public class ApiCall {
     }
 
     public Object returnSunrise() {
-        return sunrise_fin;
+        return sunrise;
     }
 
     public Object returnSunset() {
-        return sunset_fin;
+        return sunset;
     }
 
     public Object returnHumidity() {
