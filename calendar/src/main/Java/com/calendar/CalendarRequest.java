@@ -36,7 +36,7 @@ public class CalendarRequest {
 
     private static final List<String> SCOPES = Collections.singletonList(CalendarScopes.CALENDAR_READONLY);
     private static final String CREDENTIALS_FILE_PATH = "/credentials.json";
-    private String evenSummary;
+    private String eventSummary;
     private DateTime eventStart;
     private String eventLocation;
 
@@ -124,7 +124,7 @@ public class CalendarRequest {
                 if (start == null) {
                     start = event.getStart().getDate();
                 }
-                evenSummary = event.getSummary();
+                eventSummary = event.getSummary();
                 eventStart = start;
                 eventLocation = event.getLocation();
                 // System.out.printf("%s (%s)\n", event.getSummary(), start);
