@@ -27,6 +27,8 @@ Before weather.html: ![](https://github.com/Altoid0/Nautilus/blob/master/assets/
 
 After weather.html: ![](https://github.com/Altoid0/Nautilus/blob/master/assets/Weather_HomePage.png)
 
+Index.html page: ![](https://github.com/Altoid0/Nautilus/blob/master/assets/Index_HomePage.png)
+
 # Project Plan
 Here is our detailed project plan for our project: [P1 JoeCode Project Plan](https://docs.google.com/document/d/1m7wAU9ol465JiQeQv9NltoqsjlFo8B8UNO8IeDBx2rU/edit?usp=sharing)  
 
