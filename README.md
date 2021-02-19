@@ -17,13 +17,15 @@ Our project is live and operational at this link: [Nautilus](http://76.176.51.19
 We are monitoring and updating tasks that we have to do, are doing, and are done with in the [Scrum Board in GitHub](https://github.com/Altoid0/Nautilus/projects/1)  
 **Note: Link to code is in the comments for each card. Click on `Go to issue for full details` and scroll down to see the comments for each card**  
 
-# Wk 8 README Update:
-Issue | Who Did It | What We Did | Code Link
------------------------------------------ | ----------- | -------------------------------------------------------------------------- | ---------------------------------------------
-[Compile project to Jar](https://github.com/Altoid0/Nautilus/issues/22) | Tanay | Worked on fixing any compilation errors such as weather import and deployed compiled jar to devops environment running on homeserver | [Code Link](https://github.com/Altoid0/Nautilus/releases/tag/2.0.0)
-[Create backend endpoint for spring](https://github.com/Altoid0/Nautilus/issues/4) | Dhruv K | Worked on making sure that the directory pathing and the route to /weather would work properly, and making sure that the add atribute would connect to the right variable in thymeleaf | [Code Link](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java)
-[Touch up weather html](https://github.com/Altoid0/Nautilus/issues/14) | Gautam | Worked on adding the weather HTML inputs and the CSS so that the weather API has somewhere to output to | [Code Link](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/weather.html)
-[Integrate Thyme HTML with website](https://github.com/Altoid0/Nautilus/issues/12) | Dhruv S | Worked on adding thyme integration into the HTML and worked on the backend of thyme leaf so that the code knows how to input, get, and output the info from weather api | [Code Link](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/public/weather.html#L48)
+# Wk 10 README Updates - Focus on Front End:
+- This weeks focus was on the front end aspect of our project  
+- We already created an excellent front end with a clear color pallete  
+- This week, we focused on updating our weather.html file to match our style guide of our index.html page
+- Our future goals for this page are to fix up the CSS and add more color to the page. We also want to add a more appealing color system and animations to the page
+
+Before weather.html: ![](https://github.com/Altoid0/Nautilus/blob/master/assets/Weather_OldPage.png)
+
+After weather.html: ![](https://github.com/Altoid0/Nautilus/blob/master/assets/Weather_HomePage.png)
 
 # Project Plan
 Here is our detailed project plan for our project: [P1 JoeCode Project Plan](https://docs.google.com/document/d/1m7wAU9ol465JiQeQv9NltoqsjlFo8B8UNO8IeDBx2rU/edit?usp=sharing)  
