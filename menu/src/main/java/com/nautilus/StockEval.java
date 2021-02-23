@@ -13,7 +13,6 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -61,7 +60,6 @@ public class StockEval {
             ArrayList<Map<String,Object>> stock_data = (ArrayList<Map<String, Object>>) results.get("results");
             Map<String, Object> stockMap = stock_data.get(0);
             Map<String, Object> prevStockMap = stock_data.get(4);
-            Map<String, Object> sysMap = jsonToMap(results.get("sys").toString());
 
             ticker = results.get("ticker").toString();
             open_stock_price = stockMap.get("o");
