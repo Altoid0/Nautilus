@@ -115,10 +115,8 @@ public class CalendarRequest {
                 .execute();
         List<Event> items = events.getItems();
         if (items.isEmpty()) {
-            // System.out.println("No upcoming events found.");
             return null;
         } else {
-            // System.out.println("Upcoming events");
             for (Event event : items) {
                 DateTime start = event.getStart().getDateTime();
                 if (start == null) {
@@ -127,7 +125,6 @@ public class CalendarRequest {
                 eventSummary = event.getSummary();
                 eventStart = start;
                 eventLocation = event.getLocation();
-                // System.out.printf("%s (%s)\n", event.getSummary(), start);
             }
             return items;
         }
