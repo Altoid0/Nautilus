@@ -13,6 +13,8 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +25,7 @@ import java.time.*;
 
 public class StockEval {
     private String url_string;
+    private String currentDate;
   //  private Object ticker;
     private Object open_stock_price;
     private Object closed_stock_price;
@@ -40,10 +43,18 @@ public class StockEval {
         return map;
     }
 
-    public StockEval(String ticker) {
-        String API_Key = "QSnjRpHBcP7QcFMp2XEhk4GG1EYlJ9X1";
-        url_string = "https://api.polygon.io/v2/aggs/ticker/" + ticker + "/range/1/day/2020-06-01/2020-06-17?apiKey="+ API_Key;
+    public String getDate() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        return currentDate;
 
+    }
+
+    public StockEval(String ticker) {
+        getDate();
+        String API_Key = "QSnjRpHBcP7QcFMp2XEhk4GG1EYlJ9X1";
+        url_string = "https://api.polygon.io/v1/open-close/" + ticker + "/" + currentDate + "?unadjusted=true&apiKey=" + API_Key;
+        //https://api.polygon.io/v1/open-close/AAPL/2020-10-14?unadjusted=true&apiKey=QSnjRpHBcP7QcFMp2XEhk4GG1EYlJ9X1
         try {
             StringBuilder result = new StringBuilder();
             URL url = new URL(url_string);
