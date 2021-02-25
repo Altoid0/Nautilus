@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel ="stylesheet" href="weather.css">
+  <link rel ="stylesheet" href="css/weather.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a hre f="#./index">Nautilus Home</a></li>
+        <li class="active"><a href="./">Nautilus Home</a></li>
       </ul>
 
     </div>
@@ -29,7 +29,7 @@
         <input name="location" id="weatherField" type="text" class="inputField">
 
 
-        <ul class="test">
+        <!--<ul class="test">
           <p th:text = "'Location: ' + ${location}">Test text</p>
           <p th:text ="'The Temperature Feels Like: ' + ${feels_temp}">Test text</p>
           <p th:text ="'The Forecast is: ' +${forecast}">Test text</p>
@@ -37,7 +37,7 @@
           <p th:text ="'The Min Temperature is: ' +${min_temp}">Test text</p>
           <p th:text ="'The Time of Sunrise is: ' +${sunrise}">Test text</p>
           <p th:text ="'The Time of Sunset is: ' +${sunset}">Test text</p>
-        </ul>
+        </ul>-->
       </form>
     </div>
 
@@ -45,7 +45,71 @@
   </div>
 </div>
 
+<div class="cardsContainer">
+  <div class="card">
+    <div class="box">
+      <div class="content">
+        <h3>Location</h3>
+        <p th:text = "${location}">Test text</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="card">
+    <div class="box">
+      <div class="content">
+        <h3>The Temperature Feels Like:</h3>
+        <p th:text ="${feels_temp}">Test text</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="box">
+      <div class="content">
+        <h3>The Forecast is:</h3>
+        <p th:text ="${forecast}">Test text</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="box">
+      <div class="content">
+        <h3>The Max Temperature is:</h3>
+        <p th:text ="${max_temp}">Test text</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="box">
+      <div class="content">
+        <h3>The Min Temperature is:</h3>
+        <p th:text ="${min_temp}">Test text</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="box">
+      <div class="content">
+        <h3>The Time of Sunrise is:</h3>
+        <p th:text ="${sunrise}">Test text</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="box">
+      <div class="content">
+        <h3>The Time of Sunset is:</h3>
+        <p th:text ="${sunset}">Test text</p>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>
