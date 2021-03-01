@@ -44,7 +44,7 @@
             <div class="row-content">
                 <div class="col-sm-8 text-left">
                     <form action="/stock" method="GET" id="stockForm">
-                        <label for="stockField" class="inputText"> Enter the City: </label>
+                        <label for="stockField" class="inputText"> Enter the ticker: </label>
                         <input name="ticker" id="stockField" type="text" class="inputField">
 
 
@@ -54,11 +54,6 @@
                             <p th:text ="'Closed Price: ' +${closedStock}"></p>
                             <p th:text ="'Stock Price High: ' +${stockHi}"></p>
                             <p th:text ="'Stock Price Low: ' +${stockLo}"></p>
-                            <p th:text ="'Previous Open Price: ' +${prevOpenStock}"></p>
-                            <p th:text ="'Previous Close Price: ' +${prevClosedStock}"></p>
-                            <p th:text ="'Previous Stock Price High ' +${prevStockHi}"></p>
-                            <p th:text ="'Previous Stock Price Low ' +${prevStockLo}"></p>
-                            <p th:text ="'Stock Percent Gain: ' +${percentGain}"></p>
                         </ul>
                     </form>
                 </div>

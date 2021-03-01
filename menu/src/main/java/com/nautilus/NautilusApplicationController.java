@@ -41,18 +41,12 @@ public class NautilusApplicationController {
         model.addAttribute("closedStock", test.returnClosedStock());
         model.addAttribute("stockHi", test.returnStockHi());
         model.addAttribute("stockLo", test.returnStockLo());
-        model.addAttribute("prevOpenStock", test.returnPrevOpenStock());
-        model.addAttribute("prevClosedStock", test.returnPrevClosedStock());
-        model.addAttribute("prevStockHi", test.returnPrevStockHi());
-        model.addAttribute("prevStockLo", test.returnPrevStockLo());
-        model.addAttribute("percentGain", test.returnStockGain());
 
         return "stock";
     }
 
     @GetMapping("/calendar")
     public String calendar(Model model) throws IOException, GeneralSecurityException {
-        // Events returnedEvents = CalendarRequest.getEvents();
         CalendarRequest calendar = new CalendarRequest();
         model.addAttribute("Events", calendar.getEvents());
         /*
