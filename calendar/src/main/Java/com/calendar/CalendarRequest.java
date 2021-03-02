@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.security.GeneralSecurityException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -36,9 +37,6 @@ public class CalendarRequest {
 
     private static final List<String> SCOPES = Collections.singletonList(CalendarScopes.CALENDAR_READONLY);
     private static final String CREDENTIALS_FILE_PATH = "/credentials.json";
-    private String eventSummary;
-    private DateTime eventStart;
-    private String eventLocation;
 
 
 
@@ -93,11 +91,16 @@ public class CalendarRequest {
                 if (start == null) {
                     start = event.getStart().getDate();
                 }
+                String datestring = String.valueOf(start);
+                String eventtest = event.getLocation();
+                System.out.println("Event Location: " + eventtest);
+                System.out.println("Event Date/Time: " + datestring);
                 System.out.printf("%s (%s)\n", event.getSummary(), start);
             }
         }
     }
-    public List<Event> getEvents(String... args) throws IOException, GeneralSecurityException {
+    // Get and return summaries for each and event in the form of an arraylist
+    public static ArrayList<String> getSummaries() throws IOException, GeneralSecurityException {
 
         // Build a new authorized API client service.
         final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
@@ -114,6 +117,36 @@ public class CalendarRequest {
                 .setSingleEvents(true)
                 .execute();
         List<Event> items = events.getItems();
+        ArrayList<String> summaries=new ArrayList<String>();
+        if (items.isEmpty()) {
+            return null;
+        } else {
+            for (Event event : items) {
+                summaries.add(event.getSummary());
+            }
+            return summaries;
+        }
+    }
+
+    // Get and return an arraylist of times
+    public static ArrayList<String> getDates() throws IOException, GeneralSecurityException {
+
+        // Build a new authorized API client service.
+        final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+        com.google.api.services.calendar.Calendar service = new com.google.api.services.calendar.Calendar.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+                .setApplicationName(APPLICATION_NAME)
+                .build();
+
+        // List the next 10 events from the primary calendar.
+        DateTime now = new DateTime(System.currentTimeMillis());
+        Events events = service.events().list("primary")
+                .setMaxResults(10)
+                .setTimeMin(now)
+                .setOrderBy("startTime")
+                .setSingleEvents(true)
+                .execute();
+        List<Event> items = events.getItems();
+        ArrayList<String> dates=new ArrayList<String>();
         if (items.isEmpty()) {
             return null;
         } else {
@@ -122,11 +155,39 @@ public class CalendarRequest {
                 if (start == null) {
                     start = event.getStart().getDate();
                 }
-                eventSummary = event.getSummary();
-                eventStart = start;
-                eventLocation = event.getLocation();
+                String datestring = String.valueOf(start);
+                dates.add(datestring);
             }
-            return items;
+            return dates;
+        }
+    }
+
+    // Get event location
+    public static ArrayList<String> getLocations() throws IOException, GeneralSecurityException {
+
+        // Build a new authorized API client service.
+        final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+        com.google.api.services.calendar.Calendar service = new com.google.api.services.calendar.Calendar.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+                .setApplicationName(APPLICATION_NAME)
+                .build();
+
+        // List the next 10 events from the primary calendar.
+        DateTime now = new DateTime(System.currentTimeMillis());
+        Events events = service.events().list("primary")
+                .setMaxResults(10)
+                .setTimeMin(now)
+                .setOrderBy("startTime")
+                .setSingleEvents(true)
+                .execute();
+        List<Event> items = events.getItems();
+        ArrayList<String> locations=new ArrayList<String>();
+        if (items.isEmpty()) {
+            return null;
+        } else {
+            for (Event event : items) {
+                locations.add(event.getLocation());
+            }
+            return locations;
         }
     }
 }

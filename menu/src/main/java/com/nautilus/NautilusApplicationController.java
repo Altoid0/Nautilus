@@ -47,26 +47,9 @@ public class NautilusApplicationController {
 
     @GetMapping("/calendar")
     public String calendar(Model model) throws IOException, GeneralSecurityException {
-        CalendarRequest calendar = new CalendarRequest();
-        model.addAttribute("Events", calendar.getEvents());
-        /*
-        List<Event> items = CalendarRequest.getEvents().getItems();
-        if (items.isEmpty()) {
-            System.out.println("No upcoming events found.");
-        } else {
-            System.out.println("Upcoming events");
-            for (Event event : items) {
-                DateTime start = event.getStart().getDateTime();
-                if (start == null) {
-                    start = event.getStart().getDate();
-                }
-                String evenSummary = event.getSummary();
-                DateTime eventStart = start;
-                String eventLocation = event.getLocation();
-                System.out.printf("%s (%s)\n", event.getSummary(), start);
-            }
-        }
-        */
+        model.addAttribute("summaries", CalendarRequest.getSummaries());
+        model.addAttribute("datetime", CalendarRequest.getDates());
+        model.addAttribute("location", CalendarRequest.getLocations());
         return "calendar";
     }
 }
