@@ -14,8 +14,6 @@ import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.calendar.CalendarScopes;
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.Events;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -39,9 +37,6 @@ public class CalendarRequest {
 
     private static final List<String> SCOPES = Collections.singletonList(CalendarScopes.CALENDAR_READONLY);
     private static final String CREDENTIALS_FILE_PATH = "/credentials.json";
-    private String eventSummary;
-    private DateTime eventStart;
-    private String eventLocation;
 
 
 
@@ -105,7 +100,7 @@ public class CalendarRequest {
         }
     }
     // Get and return summaries for each and event in the form of an arraylist
-    public static ArrayList<String> getSummaries(String... args) throws IOException, GeneralSecurityException {
+    public static ArrayList<String> getSummaries() throws IOException, GeneralSecurityException {
 
         // Build a new authorized API client service.
         final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
@@ -134,7 +129,7 @@ public class CalendarRequest {
     }
 
     // Get and return an arraylist of times
-    public static ArrayList<String> getDates(String... args) throws IOException, GeneralSecurityException {
+    public static ArrayList<String> getDates() throws IOException, GeneralSecurityException {
 
         // Build a new authorized API client service.
         final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
@@ -168,7 +163,7 @@ public class CalendarRequest {
     }
 
     // Get event location
-    public static ArrayList<String> getLocations(String... args) throws IOException, GeneralSecurityException {
+    public static ArrayList<String> getLocations() throws IOException, GeneralSecurityException {
 
         // Build a new authorized API client service.
         final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
