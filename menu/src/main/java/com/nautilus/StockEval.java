@@ -91,8 +91,8 @@ public class StockEval {
         int prevDat1 = Integer.parseInt(prevDate)-7;
         int prevDat2 = Integer.parseInt(prevDate)-6;
         int prevDat3 = Integer.parseInt(prevDate)-5;
-        int prevDat4 = Integer.parseInt(prevDate)-4;
-        int prevDat5 = Integer.parseInt(prevDate)-3;
+        int prevDat4 = Integer.parseInt(prevDate)-2;
+        int prevDat5 = Integer.parseInt(prevDate)-2;
         int prevDat6 = Integer.parseInt(prevDate)-2;
         int prevDat7 = Integer.parseInt(prevDate)-1;
 
@@ -117,6 +117,7 @@ public class StockEval {
         //https://api.polygon.io/v1/open-close/AAPL/2020-10-14?unadjusted=true&apiKey=QSnjRpHBcP7QcFMp2XEhk4GG1EYlJ9X1
         System.out.println(url_string);
         System.out.println(url_string1);
+        System.out.println(url_string4);
         try {
             StringBuilder result = new StringBuilder();
             URL url = new URL(url_string);
@@ -138,15 +139,15 @@ public class StockEval {
 
             StringBuilder result1 = new StringBuilder();
             URL url1 = new URL(url_string1);
-            URLConnection conn1 = url.openConnection();
-            BufferedReader rd1 = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            URLConnection conn1 = url1.openConnection();
+            BufferedReader rd1 = new BufferedReader(new InputStreamReader(conn1.getInputStream()));
             String line1;
             while ((line1 = rd1.readLine()) != null) {
                 result1.append(line1);
             }
-            rd.close();
+            rd1.close();
 
-            Map<String, Object> results1 = jsonToMap(result.toString());
+            Map<String, Object> results1 = jsonToMap(result1.toString());
 
             ticker = results1.get("symbol").toString();
             open_stock_price_prev1 = results1.get("open");
@@ -154,126 +155,117 @@ public class StockEval {
             stock_price_hi_prev1 = results1.get("high");
             stock_price_lo_prev1 = results1.get("low");
 
-
-
             StringBuilder result2 = new StringBuilder();
             URL url2 = new URL(url_string2);
-            URLConnection conn2 = url.openConnection();
-            BufferedReader rd2 = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            URLConnection conn2 = url2.openConnection();
+            BufferedReader rd2 = new BufferedReader(new InputStreamReader(conn2.getInputStream()));
             String line2;
             while ((line2 = rd2.readLine()) != null) {
                 result2.append(line2);
             }
-            rd.close();
+            rd2.close();
 
-            Map<String, Object> results2 = jsonToMap(result.toString());
+            Map<String, Object> results2 = jsonToMap(result2.toString());
 
             ticker = results2.get("symbol").toString();
             open_stock_price_prev2 = results2.get("open");
             closed_stock_price_prev2 = results2.get("close");
             stock_price_hi_prev2 = results2.get("high");
             stock_price_lo_prev2 = results2.get("low");
-            System.out.println(stock_price_lo_prev2.toString());
-
 
             StringBuilder result3 = new StringBuilder();
             URL url3 = new URL(url_string3);
-            URLConnection conn3 = url.openConnection();
-            BufferedReader rd3 = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            URLConnection conn3 = url3.openConnection();
+            BufferedReader rd3 = new BufferedReader(new InputStreamReader(conn3.getInputStream()));
             String line3;
-            while ((line3 = rd.readLine()) != null) {
+            while ((line3 = rd3.readLine()) != null) {
                 result3.append(line3);
             }
-            rd.close();
+            rd3.close();
 
-            Map<String, Object> results3 = jsonToMap(result.toString());
+            Map<String, Object> results3 = jsonToMap(result3.toString());
 
-            ticker = results.get("symbol").toString();
+            ticker = results3.get("symbol").toString();
             open_stock_price_prev3 = results3.get("open");
             closed_stock_price_prev3 = results3.get("close");
             stock_price_hi_prev3 = results3.get("high");
             stock_price_lo_prev3 = results3.get("low");
 
-
             StringBuilder result4 = new StringBuilder();
             URL url4 = new URL(url_string4);
-            URLConnection conn4 = url.openConnection();
-            BufferedReader rd4 = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            URLConnection conn4 = url4.openConnection();
+            BufferedReader rd4 = new BufferedReader(new InputStreamReader(conn4.getInputStream()));
             String line4;
-            while ((line4 = rd.readLine()) != null) {
+            while ((line4 = rd4.readLine()) != null) {
                 result4.append(line4);
             }
-            rd.close();
+            rd4.close();
 
-            Map<String, Object> results4 = jsonToMap(result.toString());
+            Map<String, Object> results4 = jsonToMap(result4.toString());
 
-            ticker = results.get("symbol").toString();
+            ticker = results4.get("symbol").toString();
             open_stock_price_prev4 = results4.get("open");
             closed_stock_price_prev4 = results4.get("close");
             stock_price_hi_prev4 = results4.get("high");
             stock_price_lo_prev4 = results4.get("low");
 
-
             StringBuilder result5 = new StringBuilder();
-            URL url5 = new URL(url_string);
-            URLConnection conn5 = url.openConnection();
-            BufferedReader rd5 = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            URL url5 = new URL(url_string5);
+            URLConnection conn5 = url5.openConnection();
+            BufferedReader rd5 = new BufferedReader(new InputStreamReader(conn5.getInputStream()));
             String line5;
-            while ((line5 = rd.readLine()) != null) {
+            while ((line5 = rd5.readLine()) != null) {
                 result5.append(line5);
             }
-            rd.close();
+            rd5.close();
 
-            Map<String, Object> results5 = jsonToMap(result.toString());
+            Map<String, Object> results5 = jsonToMap(result5.toString());
 
-            ticker = results.get("symbol").toString();
+            ticker = results5.get("symbol").toString();
             open_stock_price_prev5 = results5.get("open");
             closed_stock_price_prev5 = results5.get("close");
             stock_price_hi_prev5 = results5.get("high");
             stock_price_lo_prev5 = results5.get("low");
 
-
             StringBuilder result6 = new StringBuilder();
-            URL url6 = new URL(url_string);
-            URLConnection conn6 = url.openConnection();
-            BufferedReader rd6 = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            URL url6 = new URL(url_string6);
+            URLConnection conn6 = url6.openConnection();
+            BufferedReader rd6 = new BufferedReader(new InputStreamReader(conn6.getInputStream()));
             String line6;
-            while ((line6 = rd.readLine()) != null) {
+            while ((line6 = rd6.readLine()) != null) {
                 result6.append(line6);
             }
-            rd.close();
+            rd6.close();
 
-            Map<String, Object> results6 = jsonToMap(result.toString());
+            Map<String, Object> results6 = jsonToMap(result6.toString());
 
-            ticker = results.get("symbol").toString();
+            ticker = results6.get("symbol").toString();
             open_stock_price_prev6 = results6.get("open");
             closed_stock_price_prev6 = results6.get("close");
             stock_price_hi_prev6 = results6.get("high");
             stock_price_lo_prev6 = results6.get("low");
 
-
             StringBuilder result7 = new StringBuilder();
-            URL url7 = new URL(url_string);
-            URLConnection conn7 = url.openConnection();
-            BufferedReader rd7 = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            URL url7 = new URL(url_string7);
+            URLConnection conn7 = url7.openConnection();
+            BufferedReader rd7 = new BufferedReader(new InputStreamReader(conn7.getInputStream()));
             String line7;
-            while ((line7 = rd.readLine()) != null) {
+            while ((line7 = rd7.readLine()) != null) {
                 result7.append(line7);
             }
-            rd.close();
+            rd7.close();
 
-            Map<String, Object> results7 = jsonToMap(result.toString());
+            Map<String, Object> results7 = jsonToMap(result7.toString());
 
-            ticker = results.get("symbol").toString();
+            ticker = results7.get("symbol").toString();
             open_stock_price_prev7 = results7.get("open");
             closed_stock_price_prev7 = results7.get("close");
             stock_price_hi_prev7 = results7.get("high");
             stock_price_lo_prev7 = results7.get("low");
 
+        }
 
-
-
-        } catch (MalformedURLException e) {
+        catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
