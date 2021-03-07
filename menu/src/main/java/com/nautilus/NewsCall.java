@@ -1,4 +1,4 @@
-package com.news;
+package com.nautilus;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
@@ -15,6 +15,7 @@ import java.util.Map;
 
 public class NewsCall {
     private String url_string;
+    private Object allarticles;
     private Object articleA;
     private Object articleB;
     private Object articleC;
@@ -30,15 +31,6 @@ public class NewsCall {
     private Object articleM;
     private Object articleN;
     private Object articleO;
-
-    private Object current_temp;
-    private Object feels_temp;
-    private Object forecast;
-    private Object max_temp;
-    private Object min_temp;
-    private Object sunrise;
-    private Object sunset;
-    private Object humidity;
 
     public static Map<String, Object> jsonToMap (String str) {
         Map<String, Object> map = new Gson().fromJson (
@@ -68,6 +60,7 @@ public class NewsCall {
 
             Map<String, Object> respMap = jsonToMap(result.toString());
             ArrayList<Map<String, Object>> articles = (ArrayList<Map<String, Object>>) respMap.get("articles");
+            allarticles = articles;
             Map<String, Object> article0 = articles.get(0);
             Map<String, Object> article1 = articles.get(1);
             Map<String, Object> article2 = articles.get(2);
@@ -106,63 +99,60 @@ public class NewsCall {
             articleN = article13;
             articleO = article14;
 
-            feels_temp = mainMap.get("feels_like");
-            forecast = weatherMap.get("description");
-            max_temp = mainMap.get("temp_max");
-            min_temp = mainMap.get("temp_min");
-            sunrise = sysMap.get("sunrise");
-            sunset = sysMap.get("sunrise");
-            humidity = mainMap.get("humidity");
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
 
+    public Object returnarticles() { return allarticles; }
+
     public Object article1() {
         return articleA;
     }
+
     public Object article2() {
-        return articleA;
+        return articleB;
     }
+
     public Object article3() {
-        return articleA;
+        return articleC;
     }
     public Object article4() {
-        return articleA;
+        return articleD;
     }
     public Object article5() {
-        return articleA;
+        return articleE;
     }
     public Object article6() {
-        return articleA;
+        return articleF;
     }
     public Object article7() {
-        return articleA;
+        return articleG;
     }
     public Object article8() {
-        return articleA;
+        return articleH;
     }
     public Object article9() {
-        return articleA;
+        return articleI;
     }
     public Object article10() {
-        return articleA;
+        return articleJ;
     }
     public Object article11() {
-        return articleA;
+        return articleK;
     }
     public Object article12() {
-        return articleA;
+        return articleL;
     }
     public Object article13() {
-        return articleA;
+        return articleM;
     }
     public Object article14() {
-        return articleA;
+        return articleN;
     }
     public Object article15() {
-        return articleA;
+        return articleO;
     }
 
 
