@@ -52,4 +52,25 @@ public class NautilusApplicationController {
         model.addAttribute("locations", CalendarRequest.getLocations());
         return "calendar";
     }
+
+    @GetMapping("/news")
+    public String news(Model model) {
+        NewsCall test = new NewsCall();
+        model.addAttribute("article1", test.article1());
+        model.addAttribute("article2", test.article2());
+        model.addAttribute("article3", test.article3());
+        model.addAttribute("article4", test.article4());
+        model.addAttribute("article5", test.article5());
+        model.addAttribute("article6", test.article6());
+        model.addAttribute("article7", test.article7());
+        model.addAttribute("article8", test.article8());
+        model.addAttribute("article9", test.article9());
+        model.addAttribute("article10", test.article10());
+        model.addAttribute("article11", test.article11());
+        model.addAttribute("article12", test.article12());
+        model.addAttribute("article13", test.article13());
+        model.addAttribute("article14", test.article14());
+        model.addAttribute("article15", test.article15());
+        return "news";
+    }
 }
