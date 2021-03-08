@@ -15,22 +15,21 @@ import java.util.Map;
 
 public class NewsCall {
     private String url_string;
-    private Object allarticles;
-    private Object articleA;
-    private Object articleB;
-    private Object articleC;
-    private Object articleD;
-    private Object articleE;
-    private Object articleF;
-    private Object articleG;
-    private Object articleH;
-    private Object articleI;
-    private Object articleJ;
-    private Object articleK;
-    private Object articleL;
-    private Object articleM;
-    private Object articleN;
-    private Object articleO;
+    private Map<String, Object> articleA;
+    private Map<String, Object> articleB;
+    private Map<String, Object> articleC;
+    private Map<String, Object> articleD;
+    private Map<String, Object> articleE;
+    private Map<String, Object> articleF;
+    private Map<String, Object> articleG;
+    private Map<String, Object> articleH;
+    private Map<String, Object> articleI;
+    private Map<String, Object> articleJ;
+    private Map<String, Object> articleK;
+    private Map<String, Object> articleL;
+    private Map<String, Object> articleM;
+    private Map<String, Object> articleN;
+    private Map<String, Object> articleO;
 
     public static Map<String, Object> jsonToMap (String str) {
         Map<String, Object> map = new Gson().fromJson (
@@ -41,7 +40,7 @@ public class NewsCall {
 
     public NewsCall() {
         String API_KEY = "064bc6ba0bc54a5ab590561256ca6fa8";
-        url_string = "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + "&appid=" + API_KEY;
+        url_string = "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY;
 
         try {
             StringBuilder result = new StringBuilder();
@@ -55,12 +54,8 @@ public class NewsCall {
             rd.close();
 
 
-
-
-
             Map<String, Object> respMap = jsonToMap(result.toString());
             ArrayList<Map<String, Object>> articles = (ArrayList<Map<String, Object>>) respMap.get("articles");
-            allarticles = articles;
             Map<String, Object> article0 = articles.get(0);
             Map<String, Object> article1 = articles.get(1);
             Map<String, Object> article2 = articles.get(2);
@@ -76,12 +71,6 @@ public class NewsCall {
             Map<String, Object> article12 = articles.get(12);
             Map<String, Object> article13 = articles.get(13);
             Map<String, Object> article14 = articles.get(14);
-
-
-            Map<String, Object> mainMap = jsonToMap(respMap.get("main").toString());
-            ArrayList<Map<String,Object>> weathers = (ArrayList<Map<String, Object>>) respMap.get("weather");
-            Map<String, Object> weatherMap = weathers.get(0);
-            Map<String, Object> sysMap = jsonToMap(respMap.get("sys").toString());
 
             articleA = article0;
             articleB = article1;
@@ -99,63 +88,176 @@ public class NewsCall {
             articleN = article13;
             articleO = article14;
 
+            article1.get("weather");
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public Object returnarticles() { return allarticles; }
-
-    public Object article1() {
-        return articleA;
+    public ArrayList article1() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleA.get("author").toString());
+        articleinfo.add(articleA.get("title").toString());
+        articleinfo.add(articleA.get("description").toString());
+        articleinfo.add(articleA.get("urlToImage").toString());
+        articleinfo.add(articleA.get("publishedAt").toString());
+        articleinfo.add(articleA.get("content").toString());
+        return articleinfo;
     }
 
-    public Object article2() {
-        return articleB;
+    public ArrayList article2() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleB.get("author").toString());
+        articleinfo.add(articleB.get("title").toString());
+        articleinfo.add(articleB.get("description").toString());
+        articleinfo.add(articleB.get("urlToImage").toString());
+        articleinfo.add(articleB.get("publishedAt").toString());
+        articleinfo.add(articleB.get("content").toString());
+        return articleinfo;
     }
 
-    public Object article3() {
-        return articleC;
-    }
-    public Object article4() {
-        return articleD;
-    }
-    public Object article5() {
-        return articleE;
-    }
-    public Object article6() {
-        return articleF;
-    }
-    public Object article7() {
-        return articleG;
-    }
-    public Object article8() {
-        return articleH;
-    }
-    public Object article9() {
-        return articleI;
-    }
-    public Object article10() {
-        return articleJ;
-    }
-    public Object article11() {
-        return articleK;
-    }
-    public Object article12() {
-        return articleL;
-    }
-    public Object article13() {
-        return articleM;
-    }
-    public Object article14() {
-        return articleN;
-    }
-    public Object article15() {
-        return articleO;
+    public ArrayList article3() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleC.get("author").toString());
+        articleinfo.add(articleC.get("title").toString());
+        articleinfo.add(articleC.get("description").toString());
+        articleinfo.add(articleC.get("publishedAt").toString());
+        articleinfo.add(articleC.get("urlToImage").toString());
+        articleinfo.add(articleC.get("content").toString());
+        return articleinfo;
     }
 
+    public ArrayList article4() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleD.get("author").toString());
+        articleinfo.add(articleD.get("title").toString());
+        articleinfo.add(articleD.get("description").toString());
+        articleinfo.add(articleD.get("urlToImage").toString());
+        articleinfo.add(articleD.get("publishedAt").toString());
+        articleinfo.add(articleD.get("content").toString());
+        return articleinfo;
+    }
 
+    public ArrayList article5() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleE.get("author").toString());
+        articleinfo.add(articleE.get("title").toString());
+        articleinfo.add(articleE.get("description").toString());
+        articleinfo.add(articleE.get("urlToImage").toString());
+        articleinfo.add(articleE.get("publishedAt").toString());
+        articleinfo.add(articleE.get("content").toString());
+        return articleinfo;
+    }
 
+    public ArrayList article6() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleF.get("author").toString());
+        articleinfo.add(articleF.get("title").toString());
+        articleinfo.add(articleF.get("description").toString());
+        articleinfo.add(articleF.get("urlToImage").toString());
+        articleinfo.add(articleF.get("publishedAt").toString());
+        articleinfo.add(articleF.get("content").toString());
+        return articleinfo;
+    }
+
+    public ArrayList article7() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleG.get("author").toString());
+        articleinfo.add(articleG.get("title").toString());
+        articleinfo.add(articleG.get("description").toString());
+        articleinfo.add(articleG.get("urlToImage").toString());
+        articleinfo.add(articleG.get("publishedAt").toString());
+        articleinfo.add(articleG.get("content").toString());
+        return articleinfo;
+    }
+
+    public ArrayList article8() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleH.get("author").toString());
+        articleinfo.add(articleH.get("title").toString());
+        articleinfo.add(articleH.get("description").toString());
+        articleinfo.add(articleH.get("urlToImage").toString());
+        articleinfo.add(articleH.get("publishedAt").toString());
+        articleinfo.add(articleH.get("content").toString());
+        return articleinfo;
+    }
+
+    public ArrayList article9() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleI.get("author").toString());
+        articleinfo.add(articleI.get("title").toString());
+        articleinfo.add(articleI.get("description").toString());
+        articleinfo.add(articleI.get("urlToImage").toString());
+        articleinfo.add(articleI.get("publishedAt").toString());
+        articleinfo.add(articleI.get("content").toString());
+        return articleinfo;
+    }
+
+    public ArrayList article10() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleJ.get("author").toString());
+        articleinfo.add(articleJ.get("title").toString());
+        articleinfo.add(articleJ.get("description").toString());
+        articleinfo.add(articleJ.get("urlToImage").toString());
+        articleinfo.add(articleJ.get("publishedAt").toString());
+        articleinfo.add(articleJ.get("content").toString());
+        return articleinfo;
+    }
+
+    public ArrayList article11() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleK.get("author").toString());
+        articleinfo.add(articleK.get("title").toString());
+        articleinfo.add(articleK.get("description").toString());
+        articleinfo.add(articleK.get("urlToImage").toString());
+        articleinfo.add(articleK.get("publishedAt").toString());
+        articleinfo.add(articleK.get("content").toString());
+        return articleinfo;
+    }
+
+    public ArrayList article12() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleL.get("author").toString());
+        articleinfo.add(articleL.get("title").toString());
+        articleinfo.add(articleL.get("description").toString());
+        articleinfo.add(articleL.get("urlToImage").toString());
+        articleinfo.add(articleL.get("publishedAt").toString());
+        articleinfo.add(articleL.get("content").toString());
+        return articleinfo;
+    }
+
+    public ArrayList article13() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleM.get("author").toString());
+        articleinfo.add(articleM.get("title").toString());
+        articleinfo.add(articleM.get("description").toString());
+        articleinfo.add(articleM.get("urlToImage").toString());
+        articleinfo.add(articleM.get("publishedAt").toString());
+        articleinfo.add(articleM.get("content").toString());
+        return articleinfo;
+    }
+
+    public ArrayList article14() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleN.get("author").toString());
+        articleinfo.add(articleN.get("title").toString());
+        articleinfo.add(articleN.get("description").toString());
+        articleinfo.add(articleN.get("urlToImage").toString());
+        articleinfo.add(articleN.get("publishedAt").toString());
+        articleinfo.add(articleN.get("content").toString());
+        return articleinfo;
+    }
+
+    public ArrayList article15() {
+        ArrayList<String> articleinfo = new ArrayList<String>();
+        articleinfo.add(articleO.get("author").toString());
+        articleinfo.add(articleO.get("title").toString());
+        articleinfo.add(articleO.get("description").toString());
+        articleinfo.add(articleO.get("urlToImage").toString());
+        articleinfo.add(articleO.get("publishedAt").toString());
+        articleinfo.add(articleO.get("content").toString());
+        return articleinfo;
+    }
 
 }
