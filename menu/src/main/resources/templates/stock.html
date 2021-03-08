@@ -48,6 +48,7 @@
 <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/plugins/rangeSelector.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
 
 <!-- Chart code -->
 
@@ -92,51 +93,26 @@
                 <div class="col-sm-8 text-left">
                     <form action="/stock" method="GET" id="stockForm">
                         <label for="stockField" class="inputText"> Enter the ticker: </label>
-                        <input name="ticker" id="stockField" type="text" class="inputField">
+                        <input name="ticker" id="stockField" type="text" class="inputField" value="GME">
+
                         <script>
-                                var ticker = document.getElementById("stockField");
-                                //alert(ticker);
-                                // Create chart instance
-                                var chart = am4core.create("chartdiv", am4charts.XYChart);
+                            var ticker = document.getElementById("stockField").value;
 
-                                // Set up data source
-                                chart.dataSource.url = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-160/sample_data_serial.json";
-
-                                // Create axes
-                                var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-                                categoryAxis.dataFields.category = "year";
-
-                                // Create value axis
-                                var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-
-                                // Create series
-                                var series1 = chart.series.push(new am4charts.LineSeries());
-                                series1.dataFields.valueY = "cars";
-                                series1.dataFields.categoryX = "year";
-                                series1.name = "Cars";
-                                series1.strokeWidth = 3;
-                                series1.tensionX = 0.7;
-                                series1.bullets.push(new am4charts.CircleBullet());
-
-                                var series2 = chart.series.push(new am4charts.LineSeries());
-                                series2.dataFields.valueY = "motorcycles";
-                                series2.dataFields.categoryX = "year";
-                                series2.name = "Motorcycles";
-                                series2.strokeWidth = 3;
-                                series2.tensionX = 0.7;
-                                series2.bullets.push(new am4charts.CircleBullet());
-
-                                var series3 = chart.series.push(new am4charts.LineSeries());
-                                series3.dataFields.valueY = "bicycles";
-                                series3.dataFields.categoryX = "year";
-                                series3.name = "Bicycles";
-                                series3.strokeWidth = 3;
-                                series3.tensionX = 0.7;
-                                series3.bullets.push(new am4charts.CircleBullet());
-
-                                // Add legend
-                                chart.legend = new am4charts.Legend();
-
+                            //  [object HTMLInputElement]
+                            var currentDate = new Date()
+                            var day = currentDate.getDate()
+                            var month = currentDate.getMonth() + 1
+                            var year = currentDate.getFullYear()
+                            var date = year + "-" + 0 + month + "-" + 0 + day;
+                            var prevdate = year + "-" + 0 + month + "-" + 0 + (day-7);
+                            ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+                            zingchart.render({
+                                id: 'myChart',
+                                output: "svg",
+                                    "dataurl":  "https://api.polygon.io/v2/aggs/ticker/" + ticker + "/range/1/day/" + prevdate + "/" + date + "?apiKey=QSnjRpHBcP7QcFMp2XEhk4GG1EYlJ9X1";,
+                                height: "100%",
+                                width: "100%"
+                            });
                         </script>
 
                         <ul class="test">
@@ -145,7 +121,7 @@
                             <p th:text ="'Closed Price: ' +${closedStock}"></p>
                             <p th:text ="'Stock Price High: ' +${stockHi}"></p>
                             <p th:text ="'Stock Price Low: ' +${stockLo}"></p>
-                            <div id="chartdiv"></div>
+                            <div id='myChart'></div>
 
                         </ul>
                     </form>
