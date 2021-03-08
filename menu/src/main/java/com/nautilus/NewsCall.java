@@ -16,6 +16,7 @@ import java.util.Map;
 public class NewsCall {
     private String url_string;
     private Map<String, Object> articleA;
+    public String articleAsource;
     private Map<String, Object> articleB;
     private Map<String, Object> articleC;
     private Map<String, Object> articleD;
@@ -88,18 +89,19 @@ public class NewsCall {
             articleN = article13;
             articleO = article14;
 
-            article1.get("weather");
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
 
+
     public ArrayList article1() {
         ArrayList<String> articleinfo = new ArrayList<String>();
         articleinfo.add(articleA.get("author").toString());
         articleinfo.add(articleA.get("title").toString());
         articleinfo.add(articleA.get("description").toString());
+        articleinfo.add(articleA.get("url").toString());
         articleinfo.add(articleA.get("urlToImage").toString());
         articleinfo.add(articleA.get("publishedAt").toString());
         articleinfo.add(articleA.get("content").toString());
@@ -111,6 +113,7 @@ public class NewsCall {
         articleinfo.add(articleB.get("author").toString());
         articleinfo.add(articleB.get("title").toString());
         articleinfo.add(articleB.get("description").toString());
+        articleinfo.add(articleB.get("url").toString());
         articleinfo.add(articleB.get("urlToImage").toString());
         articleinfo.add(articleB.get("publishedAt").toString());
         articleinfo.add(articleB.get("content").toString());
@@ -122,6 +125,7 @@ public class NewsCall {
         articleinfo.add(articleC.get("author").toString());
         articleinfo.add(articleC.get("title").toString());
         articleinfo.add(articleC.get("description").toString());
+        articleinfo.add(articleC.get("url").toString());
         articleinfo.add(articleC.get("publishedAt").toString());
         articleinfo.add(articleC.get("urlToImage").toString());
         articleinfo.add(articleC.get("content").toString());
@@ -133,6 +137,7 @@ public class NewsCall {
         articleinfo.add(articleD.get("author").toString());
         articleinfo.add(articleD.get("title").toString());
         articleinfo.add(articleD.get("description").toString());
+        articleinfo.add(articleD.get("url").toString());
         articleinfo.add(articleD.get("urlToImage").toString());
         articleinfo.add(articleD.get("publishedAt").toString());
         articleinfo.add(articleD.get("content").toString());
@@ -144,6 +149,7 @@ public class NewsCall {
         articleinfo.add(articleE.get("author").toString());
         articleinfo.add(articleE.get("title").toString());
         articleinfo.add(articleE.get("description").toString());
+        articleinfo.add(articleE.get("url").toString());
         articleinfo.add(articleE.get("urlToImage").toString());
         articleinfo.add(articleE.get("publishedAt").toString());
         articleinfo.add(articleE.get("content").toString());
@@ -155,6 +161,7 @@ public class NewsCall {
         articleinfo.add(articleF.get("author").toString());
         articleinfo.add(articleF.get("title").toString());
         articleinfo.add(articleF.get("description").toString());
+        articleinfo.add(articleF.get("url").toString());
         articleinfo.add(articleF.get("urlToImage").toString());
         articleinfo.add(articleF.get("publishedAt").toString());
         articleinfo.add(articleF.get("content").toString());
@@ -166,6 +173,7 @@ public class NewsCall {
         articleinfo.add(articleG.get("author").toString());
         articleinfo.add(articleG.get("title").toString());
         articleinfo.add(articleG.get("description").toString());
+        articleinfo.add(articleG.get("url").toString());
         articleinfo.add(articleG.get("urlToImage").toString());
         articleinfo.add(articleG.get("publishedAt").toString());
         articleinfo.add(articleG.get("content").toString());
@@ -177,6 +185,7 @@ public class NewsCall {
         articleinfo.add(articleH.get("author").toString());
         articleinfo.add(articleH.get("title").toString());
         articleinfo.add(articleH.get("description").toString());
+        articleinfo.add(articleH.get("url").toString());
         articleinfo.add(articleH.get("urlToImage").toString());
         articleinfo.add(articleH.get("publishedAt").toString());
         articleinfo.add(articleH.get("content").toString());
@@ -188,6 +197,7 @@ public class NewsCall {
         articleinfo.add(articleI.get("author").toString());
         articleinfo.add(articleI.get("title").toString());
         articleinfo.add(articleI.get("description").toString());
+        articleinfo.add(articleI.get("url").toString());
         articleinfo.add(articleI.get("urlToImage").toString());
         articleinfo.add(articleI.get("publishedAt").toString());
         articleinfo.add(articleI.get("content").toString());
@@ -199,6 +209,7 @@ public class NewsCall {
         articleinfo.add(articleJ.get("author").toString());
         articleinfo.add(articleJ.get("title").toString());
         articleinfo.add(articleJ.get("description").toString());
+        articleinfo.add(articleJ.get("url").toString());
         articleinfo.add(articleJ.get("urlToImage").toString());
         articleinfo.add(articleJ.get("publishedAt").toString());
         articleinfo.add(articleJ.get("content").toString());
@@ -210,6 +221,7 @@ public class NewsCall {
         articleinfo.add(articleK.get("author").toString());
         articleinfo.add(articleK.get("title").toString());
         articleinfo.add(articleK.get("description").toString());
+        articleinfo.add(articleK.get("url").toString());
         articleinfo.add(articleK.get("urlToImage").toString());
         articleinfo.add(articleK.get("publishedAt").toString());
         articleinfo.add(articleK.get("content").toString());
@@ -221,6 +233,7 @@ public class NewsCall {
         articleinfo.add(articleL.get("author").toString());
         articleinfo.add(articleL.get("title").toString());
         articleinfo.add(articleL.get("description").toString());
+        articleinfo.add(articleL.get("url").toString());
         articleinfo.add(articleL.get("urlToImage").toString());
         articleinfo.add(articleL.get("publishedAt").toString());
         articleinfo.add(articleL.get("content").toString());
@@ -232,6 +245,7 @@ public class NewsCall {
         articleinfo.add(articleM.get("author").toString());
         articleinfo.add(articleM.get("title").toString());
         articleinfo.add(articleM.get("description").toString());
+        articleinfo.add(articleM.get("url").toString());
         articleinfo.add(articleM.get("urlToImage").toString());
         articleinfo.add(articleM.get("publishedAt").toString());
         articleinfo.add(articleM.get("content").toString());
@@ -243,6 +257,7 @@ public class NewsCall {
         articleinfo.add(articleN.get("author").toString());
         articleinfo.add(articleN.get("title").toString());
         articleinfo.add(articleN.get("description").toString());
+        articleinfo.add(articleN.get("url").toString());
         articleinfo.add(articleN.get("urlToImage").toString());
         articleinfo.add(articleN.get("publishedAt").toString());
         articleinfo.add(articleN.get("content").toString());
@@ -254,6 +269,7 @@ public class NewsCall {
         articleinfo.add(articleO.get("author").toString());
         articleinfo.add(articleO.get("title").toString());
         articleinfo.add(articleO.get("description").toString());
+        articleinfo.add(articleO.get("url").toString());
         articleinfo.add(articleO.get("urlToImage").toString());
         articleinfo.add(articleO.get("publishedAt").toString());
         articleinfo.add(articleO.get("content").toString());
