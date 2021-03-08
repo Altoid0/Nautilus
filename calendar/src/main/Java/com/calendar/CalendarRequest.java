@@ -185,7 +185,11 @@ public class CalendarRequest {
             return null;
         } else {
             for (Event event : items) {
-                locations.add(event.getLocation());
+                String location = event.getLocation();
+                if (location == null) {
+                    location = "\u200B";
+                }
+                locations.add(location);
             }
             return locations;
         }

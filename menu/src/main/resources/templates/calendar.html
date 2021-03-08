@@ -20,10 +20,14 @@
         </div>
         <div class="col-sm-8 text-left">
                 <div class="test">
-                    <div th:each="Event : ${Events}">
-                        Event Summary: <p th:text="${Events.eventSummary}"></p>
-                        Event starts at: <p th:text ="${Events.eventStart}"></p>
-                        Event is at: <p th:text ="${Events.eventLocation}"></p>
+                    <div th:each="summary : ${summaries}">
+                        <p th:text="${summary}"></p>
+                    </div>
+                    <div th:each="datetime : ${datetimes}">
+                        <p th:text="${datetime}"></p>
+                    </div>
+                    <div th:each="location : ${locations}">
+                        <p th:text="${location}"></p>
                     </div>
                 </div>
         </div>

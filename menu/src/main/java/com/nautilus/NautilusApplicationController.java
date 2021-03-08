@@ -48,8 +48,8 @@ public class NautilusApplicationController {
     @GetMapping("/calendar")
     public String calendar(Model model) throws IOException, GeneralSecurityException {
         model.addAttribute("summaries", CalendarRequest.getSummaries());
-        model.addAttribute("datetime", CalendarRequest.getDates());
-        model.addAttribute("location", CalendarRequest.getLocations());
+        model.addAttribute("datetimes", CalendarRequest.getDates());
+        model.addAttribute("locations", CalendarRequest.getLocations());
         return "calendar";
     }
 }
