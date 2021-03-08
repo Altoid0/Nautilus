@@ -1,4 +1,4 @@
-# Morning Briefing  
+# Nautilus
 A utility that allows users to get a rundown of their day in a single app. Information that users get will help them start off their day and give them a morning briefing
 
 ## Project Credits
