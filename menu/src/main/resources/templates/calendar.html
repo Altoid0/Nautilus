@@ -8,70 +8,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Calendar</title>
-    <link rel="stylesheet" href="css/calendar.css">
 </head>
 
 <body>
 <div class="container-fluid text-center">
-<!--    <div class="row content">-->
-<!--        <div class="col-sm-2 sidenav">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
             <p><a href="#"></a></p>
             <p><a href="#"></a></p>
             <p><a href="#"></a></p>
-        </div>-->
-<!--        <div class="col-sm-8 text-left">
-                <div class="test">
-
-
-
-                </div>
-        </div>-->
-
-        <div class="row">
-            <div class="column">
-                <h1>Summary</h1>
-                <div th:each="summary : ${summaries}">
-                    <p th:text="${summary}"></p>
-                </div>
-            </div>
-
-            <div class="column">
-                <h1>Date & Time</h1>
-                <div th:each="datetime : ${datetimes}">
-                    <p th:text="${datetime}"></p>
-                </div>
-            </div>
-
-            <div class="column">
-                <h1>Location</h1>
-                <div th:each="location : ${locations}">
-                    <p th:text="${location}"></p>
-                </div>
-            </div>
-
         </div>
+        <div class="col-sm-8 text-left">
+                <div class="test">
+                    <div th:each="event : ${eventsarray}">
+                        <p th:text="${event.summary}"></p>
+                        <p th:text="${event.date}"></p>
+                        <p th:text="${event.location}"></p>
+                    <div>
 
-<!--        <table>
-            <tr>
-                <th>Item 1</th>
-                <th>Item 2</th>
-                <th>Item 3</th>
-            </tr>
-            <tr th:each="summary : ${summaries}">
-                <td th:text="${summary}"></td>
-            </tr>
-            <tr th:each="datetime : ${datetimes}">
-                <td th:text="${datetime}"></td>
-            </tr>
-            <tr th:each="location : ${locations}">
-                <td th:text="${location}"></td>
-            </tr>
-        </table>-->
-
+                </div>
+        </div>
         <div class="col-sm-2 sidenav">
         </div>
     </div>
-<!--</div>-->
+</div>
 
 </body>
 </html>

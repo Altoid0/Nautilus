@@ -91,10 +91,10 @@ public class CalendarRequest {
                 if (start == null) {
                     start = event.getStart().getDate();
                 }
-                String datestring = String.valueOf(start);
-                String eventtest = event.getLocation();
-                System.out.println("Event Location: " + eventtest);
-                System.out.println("Event Date/Time: " + datestring);
+                //String datestring = String.valueOf(start);
+                //String eventtest = event.getLocation();
+                //System.out.println("Event Location: " + eventtest);
+                //System.out.println("Event Date/Time: " + datestring);
                 System.out.printf("%s (%s)\n", event.getSummary(), start);
             }
         }
@@ -192,6 +192,47 @@ public class CalendarRequest {
                 locations.add(location);
             }
             return locations;
+        }
+    }
+
+    public static ArrayList<EventCollector> setEvents() throws IOException, GeneralSecurityException {
+        // Build a new authorized API client service.
+        final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+        com.google.api.services.calendar.Calendar service = new com.google.api.services.calendar.Calendar.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+                .setApplicationName(APPLICATION_NAME)
+                .build();
+        // List the next 10 events from the primary calendar.
+        DateTime now = new DateTime(System.currentTimeMillis());
+        Events events = service.events().list("primary")
+                .setMaxResults(10)
+                .setTimeMin(now)
+                .setOrderBy("startTime")
+                .setSingleEvents(true)
+                .execute();
+        List<Event> items = events.getItems();
+        ArrayList<EventCollector> eventsArray = new ArrayList<EventCollector>();
+        if (items.isEmpty()) {
+            return null;
+        } else {
+            for (Event event : items) {
+                //attrib 1
+                String summary = event.getSummary();
+                DateTime start = event.getStart().getDateTime();
+                if (start == null) {
+                    start = event.getStart().getDate();
+                }
+                //attrib 2
+                String datestring = String.valueOf(start);
+                //attrib 3
+                String location = event.getLocation();
+                if (location == null) {
+                    location = "\u200B";
+                }
+                // Object
+                EventCollector eventObject = new EventCollector(summary,datestring,location);
+                eventsArray.add(eventObject);
+            }
+            return eventsArray;
         }
     }
 }
