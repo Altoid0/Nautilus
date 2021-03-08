@@ -18,7 +18,6 @@
             <li th:text="${article1[2]}"></li>
             <li th:text="${article1[3]}"></li>
             <img th:src="${article1[4]}">
-<!--            <li th:text="${article1[4]}"></li>-->
             <li th:text="${article1[5]}"></li>
             <li th:text="${article1[6]}"></li>
         </div>
@@ -26,9 +25,37 @@
 
     <div class="col-sm-8 text-left">
         <div class="test">
-            <div th:each="article : ${article2}">
-                <p th:text="${article}"></p>
-            </div>
+            <li th:text="${article2[0]}"></li>
+            <li th:text="${article2[1]}"></li>
+            <li th:text="${article2[2]}"></li>
+            <li th:text="${article2[3]}"></li>
+            <img th:src="${article2[4]}">
+            <li th:text="${article2[5]}"></li>
+            <li th:text="${article2[6]}"></li>
+        </div>
+    </div>
+
+    <div class="col-sm-8 text-left">
+        <div class="test">
+            <li th:text="${article3[0]}"></li>
+            <li th:text="${article3[1]}"></li>
+            <li th:text="${article3[2]}"></li>
+            <li th:text="${article3[3]}"></li>
+            <img th:src="${article3[4]}">
+            <li th:text="${article3[5]}"></li>
+            <li th:text="${article3[6]}"></li>
+        </div>
+    </div>
+
+    <div class="col-sm-8 text-left">
+        <div class="test">
+            <li th:text="${article4[0]}"></li>
+            <li th:text="${article4[1]}"></li>
+            <li th:text="${article4[2]}"></li>
+            <li th:text="${article4[3]}"></li>
+            <img th:src="${article4[4]}">
+            <li th:text="${article4[5]}"></li>
+            <li th:text="${article4[6]}"></li>
         </div>
     </div>
 
