@@ -1,5 +1,5 @@
 # Nautilus
-A utility that allows users to get a rundown of their day in a single app. Information that users get will help them start off their day and give them a morning briefing
+A utility that allows users to get a rundown of their day in a single app. Start your morning off the right way with Nautilus.
 
 ## Project Credits
 Contributor | GitHub Link | Journal Links
@@ -9,6 +9,22 @@ Tanay Shah | [@Altoid0](https://github.com/Altoid0) | [Tanay & Dhruv S Journal](
 Dhruv Kanetkar | [@DhruvK0](https://github.com/DhruvK0) | [Gautam & Dhruv K Journal](https://docs.google.com/document/d/1tCDVj-Cb-zR5BkXZF6V9x2aPzR__5qMSUu2iNDu2oko/edit?usp=sharing)
 Dhruv Sengupta | [@DaHippoBear](https://github.com/DaHippoBear) | [Tanay & Dhruv S Journal](https://docs.google.com/document/d/1g60S7gscwpYl4oalQHzpsQa1RahPRVd42iXyDRPMrnE/edit?usp=sharing)
 
+## Technicals Involved
+* Gradle
+  * Multiproject Builds
+  * Per Project Dependencies
+  * Google Calendar API
+  * Weather API
+  * Stocks API
+  * News API
+* SpringBoot
+  * Page Routing
+  * User Input to Backend
+* Thymeleaf
+  * Iterative Loop Displays
+  * Indexed Array Displays
+  * Null Pointer Error Handling
+  * Javascript Integration for graphing
 
 ## Project Site
 Our project is live and operational at this link: [Nautilus](http://76.176.51.196/)
