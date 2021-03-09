@@ -97,14 +97,14 @@ public class NewsCall {
 
 
     public ArrayList article1() {
-        ArrayList<String> articleinfo = new ArrayList<String>();
-        articleinfo.add(articleA.get("author").toString());
-        articleinfo.add(articleA.get("title").toString());
-        articleinfo.add(articleA.get("description").toString());
-        articleinfo.add(articleA.get("url").toString());
-        articleinfo.add(articleA.get("urlToImage").toString());
-        articleinfo.add(articleA.get("publishedAt").toString());
-        articleinfo.add(articleA.get("content").toString());
+        ArrayList<Object> articleinfo = new ArrayList<Object>();
+        articleinfo.add(articleA.get("author"));
+        articleinfo.add(articleA.get("title"));
+        articleinfo.add(articleA.get("description"));
+        articleinfo.add(articleA.get("url"));
+        articleinfo.add(articleA.get("urlToImage"));
+        articleinfo.add(articleA.get("publishedAt"));
+        articleinfo.add(articleA.get("content"));
         return articleinfo;
     }
 
