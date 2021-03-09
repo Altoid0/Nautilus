@@ -42,6 +42,36 @@ public class NautilusApplicationController {
         model.addAttribute("stockHi", test.returnStockHi());
         model.addAttribute("stockLo", test.returnStockLo());
 
+        model.addAttribute("openStock1", test.returnOpenStock1());
+        model.addAttribute("closedStock1", test.returnClosedStock1());
+        model.addAttribute("stockHi1", test.returnStockHi1());
+        model.addAttribute("stockLo1", test.returnStockLo1());
+
+        model.addAttribute("openStock2", test.returnOpenStock2());
+        model.addAttribute("closedStock2", test.returnClosedStock2());
+        model.addAttribute("stockHi2", test.returnStockHi2());
+        model.addAttribute("stockLo2", test.returnStockLo2());
+
+        model.addAttribute("openStock3", test.returnOpenStock3());
+        model.addAttribute("closedStock3", test.returnClosedStock3());
+        model.addAttribute("stockHi3", test.returnStockHi3());
+        model.addAttribute("stockLo3", test.returnStockLo3());
+
+        model.addAttribute("openStock4", test.returnOpenStock4());
+        model.addAttribute("closedStock4", test.returnClosedStock4());
+        model.addAttribute("stockHi4", test.returnStockHi4());
+        model.addAttribute("stockLo4", test.returnStockLo4());
+
+        model.addAttribute("openStock5", test.returnOpenStock5());
+        model.addAttribute("closedStock5", test.returnClosedStock5());
+        model.addAttribute("stockHi5", test.returnStockHi5());
+        model.addAttribute("stockLo5", test.returnStockLo5());
+
+        model.addAttribute("openStock6", test.returnOpenStock6());
+        model.addAttribute("closedStock6", test.returnClosedStock6());
+        model.addAttribute("stockHi6", test.returnStockHi6());
+        model.addAttribute("stockLo6", test.returnStockLo6());
+
         return "stock";
     }
 
