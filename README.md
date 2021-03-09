@@ -11,20 +11,20 @@ Dhruv Sengupta | [@DaHippoBear](https://github.com/DaHippoBear) | [Tanay & Dhruv
 
 ## Technicals Involved
 * Gradle
-  * Multiproject Builds
-  * Per Project Dependencies
-  * Google Calendar API
-  * Weather API
-  * Stocks API
-  * News API
+  * [Multiproject Builds](https://github.com/Altoid0/Nautilus/blob/master/settings.gradle)
+  * [Per Project Dependencies](https://github.com/Altoid0/Nautilus/blob/master/menu/build.gradle)
+  * [Google Calendar API](https://github.com/Altoid0/Nautilus/blob/master/calendar/src/main/Java/com/calendar/CalendarRequest.java)
+  * [Weather API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/ApiCall.java)
+  * [Stocks API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/StockEval.java)
+  * [News API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NewsCall.java)
 * SpringBoot
-  * Page Routing
-  * User Input to Backend
+  * [Page Routing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L20)
+  * [User Input to Backend](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L21)
 * Thymeleaf
-  * Iterative Loop Displays
-  * Indexed Array Displays
-  * Null Pointer Error Handling
-  * Javascript Integration for graphing
+  * [Iterative Loop Displays](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/calendar.html#L34)
+  * [Indexed Array Displays]()
+  * [Null Pointer Error Handling]()
+  * [Javascript Integration for graphing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/stock.html)
 
 ## Project Site
 Our project is live and operational at this link: [Nautilus](http://76.176.51.196/)
