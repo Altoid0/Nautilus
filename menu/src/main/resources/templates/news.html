@@ -13,155 +13,41 @@
 <body>
     <div class="col-sm-8 text-left">
         <div class="test">
-            <li th:text="${article1[0]}"></li>
-            <li th:text="${article1[1]}"></li>
-            <li th:text="${article1[2]}"></li>
-            <li th:text="${article1[3]}"></li>
-            <img th:src="${article1[4]}">
-            <li th:text="${article1[5]}"></li>
-            <li th:text="${article1[6]}"></li>
+            <li th:text="${article1[0]} ?: '(no content)'"></li>
+            <li th:text="${article1[1]} ?: '(no content)'"></li>
+            <li th:text="${article1[2]} ?: '(no content)'"></li>
+            <li th:text="${article1[3]} ?: '(no content)'"></li>
+            <img th:src="${article1[4]} ?: '(no content)'">
+            <li th:text="${article1[5]} ?: '(no content)'"></li>
+            <li th:text="${article1[6]} ?: '(no content)'"></li>
         </div>
     </div>
 
     <div class="col-sm-8 text-left">
         <div class="test">
-            <li th:text="${article2[0]}"></li>
-            <li th:text="${article2[1]}"></li>
-            <li th:text="${article2[2]}"></li>
-            <li th:text="${article2[3]}"></li>
-            <img th:src="${article2[4]}">
-            <li th:text="${article2[5]}"></li>
-            <li th:text="${article2[6]}"></li>
+            <li th:text="${article2[0]} ?: '(no content)'"></li>
+            <li th:text="${article2[1]} ?: '(no content)'"></li>
+            <li th:text="${article2[2]} ?: '(no content)'"></li>
+            <li th:text="${article2[3]} ?: '(no content)'"></li>
+            <img th:src="${article2[4]} ?: '(no content)'">
+            <li th:text="${article2[5]} ?: '(no content)'"></li>
+            <li th:text="${article2[6]} ?: '(no content)'"></li>
         </div>
     </div>
 
     <div class="col-sm-8 text-left">
         <div class="test">
-            <li th:text="${article3[0]}"></li>
-            <li th:text="${article3[1]}"></li>
-            <li th:text="${article3[2]}"></li>
-            <li th:text="${article3[3]}"></li>
-            <img th:src="${article3[4]}">
-            <li th:text="${article3[5]}"></li>
-            <li th:text="${article3[6]}"></li>
+            <li th:text="${article3[0]} ?: '(no content)'"></li>
+            <li th:text="${article3[1]} ?: '(no content)'"></li>
+            <li th:text="${article3[2]} ?: '(no content)'"></li>
+            <li th:text="${article3[3]} ?: '(no content)'"></li>
+            <img th:src="${article3[4]} ?: '(no content)'">
+            <li th:text="${article3[5]} ?: '(no content)'"></li>
+            <li th:text="${article3[6]} ?: '(no content)'"></li>
         </div>
     </div>
 
-    <div class="col-sm-8 text-left">
-        <div class="test">
-            <li th:text="${article4[0]}"></li>
-            <li th:text="${article4[1]}"></li>
-            <li th:text="${article4[2]}"></li>
-            <li th:text="${article4[3]}"></li>
-            <img th:src="${article4[4]}">
-            <li th:text="${article4[5]}"></li>
-            <li th:text="${article4[6]}"></li>
-        </div>
-    </div>
 
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article3}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article4}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article5}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article6}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article7}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article8}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article9}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article10}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article11}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article12}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article13}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article14}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="col-sm-8 text-left">-->
-<!--        <div class="test">-->
-<!--            <div th:each="article : ${article15}">-->
-<!--                <p th:text="${article}"></p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
 
 </body>
 </html>

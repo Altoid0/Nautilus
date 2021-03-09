@@ -95,9 +95,9 @@ public class NautilusApplicationController {
         model.addAttribute("article5", test.article5());
         model.addAttribute("article6", test.article6());
         model.addAttribute("article7", test.article7());
-        model.addAttribute("article8", test.article9());
-        model.addAttribute("article9", test.article10());
-        model.addAttribute("article10", test.article13());
+        model.addAttribute("article8", test.article8());
+        model.addAttribute("article9", test.article9());
+        model.addAttribute("article10", test.article10());
 
         return "news";
     }
