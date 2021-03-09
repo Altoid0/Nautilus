@@ -111,3 +111,7 @@ table td:first-child {
 .row-content {
     position: center;
 }
+
+li {
+    padding-top: 25px;
+}
