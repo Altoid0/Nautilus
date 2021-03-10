@@ -10,21 +10,22 @@ Dhruv Kanetkar | [@DhruvK0](https://github.com/DhruvK0) | [Gautam & Dhruv K Jour
 Dhruv Sengupta | [@DaHippoBear](https://github.com/DaHippoBear) | [Tanay & Dhruv S Journal](https://docs.google.com/document/d/1g60S7gscwpYl4oalQHzpsQa1RahPRVd42iXyDRPMrnE/edit?usp=sharing)
 
 ## Technicals Involved
-* Gradle
-  * Multiproject Builds
-  * Per Project Dependencies
-  * Google Calendar API
-  * Weather API
-  * Stocks API
-  * News API
+* Gradle/Java Project
+  * Tanay - [Multiproject Builds](https://github.com/Altoid0/Nautilus/blob/master/settings.gradle) | [resources used](https://docs.gradle.org/current/samples/sample_building_java_applications_multi_project.html)
+  * Tanay - [Per Project Dependencies](https://github.com/Altoid0/Nautilus/blob/master/menu/build.gradle) | [resources used](https://spring.io/guides/gs/gradle/)
+  * Tanay - Object Definition Inspired by CB - [Google Calendar API with Custom Object Creation](https://github.com/Altoid0/Nautilus/blob/master/calendar/src/main/Java/com/calendar/CalendarRequest.java) | [resources used](https://developers.google.com/calendar/quickstart/java)
+  * Dhruv S - [Weather API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/ApiCall.java) | [resources used](https://openweathermap.org/current)
+  * Dhruv S - [Stocks API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/StockEval.java) | [resources used](https://polygon.io/)
+  * Dhruv K/Gautam - [News API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NewsCall.java) | [resources used](https://newsapi.org/)
 * SpringBoot
-  * Page Routing
-  * User Input to Backend
+  * Dhruv K - Inspired by Techtalk - [Page Routing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L20) | [resources used](https://github.com/nighthawkcoders/spring-idea/blob/master/src/main/java/com/example/lessons/controllers/_MainController.java)
+  * Dhruv K - Inspired by Techtalk - [User Input to Backend](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L21) | [resources used](https://github.com/nighthawkcoders/spring-idea/blob/master/src/main/java/com/example/lessons/controllers/_MainController.java)
+  * Gautam - [All HTML and CSS Frontend](https://github.com/Altoid0/Nautilus/tree/master/menu/src/main/resources) | [resources used](https://www.w3schools.com/)
 * Thymeleaf
-  * Iterative Loop Displays
-  * Indexed Array Displays
-  * Null Pointer Error Handling
-  * Javascript Integration for graphing
+  * Tanay/Gautam - Backend Object Definition Inspired by CB - [Iterative Loop Displays](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/calendar.html#L34) | [resources used](https://stackoverflow.com/questions/43266112/how-to-display-the-collection-of-objects-with-for-each-loop-in-thymeleaf/43267021)
+  * Dhruv K/Gautam - [Indexed Array Displays]() | [resources used](https://www.baeldung.com/thymeleaf-iteration)
+  * Dhruv K - [Null Pointer Error Handling]() | [resources used](https://attacomsian.com/blog/thymeleaf-handling-null-values)
+  * Dhruv S - [Javascript Integration for graphing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/stock.html) | [resources used](https://visjs.github.io/vis-timeline/docs/graph2d/)
 
 ## Project Site
 Our project is live and operational at this link: [Nautilus](http://76.176.51.196/)

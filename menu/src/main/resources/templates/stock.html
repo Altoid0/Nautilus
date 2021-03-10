@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
 <head>
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
@@ -7,9 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="js/vis.js"></script>
     <link rel ="stylesheet" href="css/weather.css">
 </head>
+
 <body>
 
 <nav class="navbar navbar-inverse">
@@ -55,90 +57,39 @@
                             <p th:text ="'Closed Price: ' +${closedStock}"></p>
                             <p th:text ="'Stock Price High: ' +${stockHi}"></p>
                             <p th:text ="'Stock Price Low: ' +${stockLo}"></p>
-                            <p th:text ="'Stock Price Low: ' +${openStock6}"></p>
-                            <p id="test"></p>
+                            <img src="stockgraph.jpg" alt="graph">
 
+<!--                            <script th:inline="javascript">-->
+<!--                                var stockopen1 = [[${openStock1}]];-->
+<!--                                var stockclose1 = [[${closedStock1}]];-->
+<!--                                var stockhi1 = [[${stockHi1}]];-->
+<!--                                var stocklo1 = [[${stockLo1}]];-->
 
+<!--                                var stockopen2 = [[${openStock2}]];-->
+<!--                                var stockclose2 = [[${closedStock2}]];-->
+<!--                                var stockhi2 = [[${stockHi2}]];-->
+<!--                                var stocklo2 = [[${stockLo2}]];-->
 
+<!--                                var stockopen3 = [[${openStock3}]];-->
+<!--                                var stockclose3 = [[${closedStock3}]];-->
+<!--                                var stockhi3 = [[${stockHi3}]];-->
+<!--                                var stocklo3 = [[${stockLo3}]];-->
 
-                            <div id="visualization"></div>
+<!--                                var stockopen4 = [[${openStock4}]];-->
+<!--                                var stockclose4 = [[${closedStock4}]];-->
+<!--                                var stockhi4 = [[${stockHi4}]];-->
+<!--                                var stocklo4 = [[${stockLo4}]];-->
 
-                            <script th:inline="javascript">
-                                var ticker = document.getElementById("stockField").value;
+<!--                                var stockopen5 = [[${openStock5}]];-->
+<!--                                var stockclose5 = [[${closedStock5}]];-->
+<!--                                var stockhi5 = [[${stockHi5}]];-->
+<!--                                var stocklo5 = [[${stockLo5}]];-->
 
-                                //  [object HTMLInputElement]
-                                var currentDate = new Date()
-
-                                var day1 = currentDate.getDate()-7
-                                var day2 = currentDate.getDate()-6
-                                var day3 = currentDate.getDate()-5
-                                var day4 = currentDate.getDate()-4
-                                var day5 = currentDate.getDate()-3
-                                var day6 = currentDate.getDate()-2
-
-                                var stockopen1 = [[${openStock1}]];
-                                var stockclose1 = [[${closedStock1}]];
-                                var stockhi1 = [[${stockHi1}]];
-                                var stocklo1 = [[${stockLo1}]];
-
-                                var stockopen2 = [[${openStock2}]];
-                                var stockclose2 = [[${closedStock2}]];
-                                var stockhi2 = [[${stockHi2}]];
-                                var stocklo2 = [[${stockLo2}]];
-
-                                var stockopen3 = [[${openStock3}]];
-                                var stockclose3 = [[${closedStock3}]];
-                                var stockhi3 = [[${stockHi3}]];
-                                var stocklo3 = [[${stockLo3}]];
-
-                                var stockopen4 = [[${openStock4}]];
-                                var stockclose4 = [[${closedStock4}]];
-                                var stockhi4 = [[${stockHi4}]];
-                                var stocklo4 = [[${stockLo4}]];
-
-                                var stockopen5 = [[${openStock5}]];
-                                var stockclose5 = [[${closedStock5}]];
-                                var stockhi5 = [[${stockHi5}]];
-                                var stocklo5 = [[${stockLo5}]];
-
-                                var stockopen6 = [[${openStock6}]];
-                                var stockclose6 = [[${closedStock6}]];
-                                var stockhi6 = [[${stockHi6}]];
-                                var stocklo6 = [[${stockLo6}]];
-
-
-
-                                var month = currentDate.getMonth() + 1
-                                var month1 = month.toString()
-                                var year = currentDate.getFullYear()
-                                var date = year + "-" + "0" + month + "-" + "0" + day;
-                                var prevdate1 = year + "-" + "0" + month + "-" + "0" + (day1);
-                                var prevdate2 = year + "-" + "0" + month + "-" + "0" + (day2);
-                                var prevdate3 = year + "-" + "0" + month + "-" + "0" + (day3);
-                                var prevdate4 = year + "-" + "0" + month + "-" + "0" + (day4);
-                                var prevdate5 = year + "-" + "0" + month + "-" + "0" + (day5);
-                                var prevdate6 = year + "-" + "0" + month + "-" + "0" + (day6);
-
-                                document.getElementById("test").innerHTML = month1;
-
-                                var container = document.getElementById('visualization');
-                                var items = [
-                                    {x: prevdate1, y: stockopen1},
-                                    {x: prevdate2, y: stockopen2},
-                                    {x: prevdate3, y: stockopen3},
-                                    {x: prevdate4, y: stockopen4},
-                                    {x: prevdate5, y: stockopen5},
-                                    {x: prevdate6, y: stockopen6},
-                                ];
-
-                                var dataset = new vis.DataSet(items);
-                                var options = {
-                                    start: prevdate,
-                                    end: prevdate5
-                                };
-                                var Graph2d = new vis.Graph2d(container, dataset, options);
-
-                            </script>
+<!--                                var stockopen6 = [[${openStock6}]];-->
+<!--                                var stockclose6 = [[${closedStock6}]];-->
+<!--                                var stockhi6 = [[${stockHi6}]];-->
+<!--                                var stocklo6 = [[${stockLo6}]];-->
+<!--                            </script>-->
                         </ul>
                     </form>
                 </div>
@@ -150,6 +101,5 @@
 </div>
 
 </div>
-
 </body>
 </html>
