@@ -10,7 +10,7 @@ Dhruv Kanetkar | [@DhruvK0](https://github.com/DhruvK0) | [Gautam & Dhruv K Jour
 Dhruv Sengupta | [@DaHippoBear](https://github.com/DaHippoBear) | [Tanay & Dhruv S Journal](https://docs.google.com/document/d/1g60S7gscwpYl4oalQHzpsQa1RahPRVd42iXyDRPMrnE/edit?usp=sharing)
 
 ## Technicals Involved
-* Gradle
+* Gradle/Java Project
   * Tanay - [Multiproject Builds](https://github.com/Altoid0/Nautilus/blob/master/settings.gradle) | [resources used](https://docs.gradle.org/current/samples/sample_building_java_applications_multi_project.html)
   * Tanay - [Per Project Dependencies](https://github.com/Altoid0/Nautilus/blob/master/menu/build.gradle) | [resources used](https://spring.io/guides/gs/gradle/)
   * Tanay - Object Definition Inspired by CB - [Google Calendar API with Custom Object Creation](https://github.com/Altoid0/Nautilus/blob/master/calendar/src/main/Java/com/calendar/CalendarRequest.java) | [resources used](https://developers.google.com/calendar/quickstart/java)
