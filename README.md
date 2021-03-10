@@ -11,20 +11,21 @@ Dhruv Sengupta | [@DaHippoBear](https://github.com/DaHippoBear) | [Tanay & Dhruv
 
 ## Technicals Involved
 * Gradle
-  * Tanay - [Multiproject Builds](https://github.com/Altoid0/Nautilus/blob/master/settings.gradle) [resources used]()
-  * Tanay - [Per Project Dependencies](https://github.com/Altoid0/Nautilus/blob/master/menu/build.gradle)
-  * Tanay - [Google Calendar API](https://github.com/Altoid0/Nautilus/blob/master/calendar/src/main/Java/com/calendar/CalendarRequest.java)
-  * Dhruv S - [Weather API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/ApiCall.java)
-  * Dhruv S - [Stocks API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/StockEval.java)
-  * Dhruv K - [News API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NewsCall.java)
+  * Tanay - [Multiproject Builds](https://github.com/Altoid0/Nautilus/blob/master/settings.gradle) [resources used](https://docs.gradle.org/current/samples/sample_building_java_applications_multi_project.html
+  * Tanay - [Per Project Dependencies](https://github.com/Altoid0/Nautilus/blob/master/menu/build.gradle) [resources used](https://spring.io/guides/gs/gradle/)
+  * Tanay - Object Definition Inspired by CB - [Google Calendar API with Custom Object Creation](https://github.com/Altoid0/Nautilus/blob/master/calendar/src/main/Java/com/calendar/CalendarRequest.java) [resources used](https://developers.google.com/calendar/quickstart/java)
+  * Dhruv S - [Weather API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/ApiCall.java) [resources used](https://openweathermap.org/current)
+  * Dhruv S - [Stocks API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/StockEval.java) [resources used](https://polygon.io/)
+  * Dhruv K/Gautam - [News API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NewsCall.java) [resources used](https://newsapi.org/)
 * SpringBoot
-  * Dhruv K - [Page Routing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L20)
-  * Dhruv K - [User Input to Backend](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L21)
+  * Dhruv K - Inspired by Techtalk - [Page Routing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L20) [resources used](https://github.com/nighthawkcoders/spring-idea/blob/master/src/main/java/com/example/lessons/controllers/_MainController.java)
+  * Dhruv K - Inspired by Techtalk - [User Input to Backend](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L21) [resources used](https://github.com/nighthawkcoders/spring-idea/blob/master/src/main/java/com/example/lessons/controllers/_MainController.java)
+  * Gautam - [All HTML and CSS Frontend](https://github.com/Altoid0/Nautilus/tree/master/menu/src/main/resources) [resources used](https://www.w3schools.com/)
 * Thymeleaf
-  * Tanay - [Iterative Loop Displays](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/calendar.html#L34)
-  * Dhruv K - [Indexed Array Displays]()
-  * Dhruv K - [Null Pointer Error Handling]()
-  * Dhruv S - [Javascript Integration for graphing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/stock.html)
+  * Tanay/Gautam - Backend Object Definition Inspired by CB - [Iterative Loop Displays](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/calendar.html#L34) [resources used]()
+  * Dhruv K/Gautam - [Indexed Array Displays]() [resources used](https://www.baeldung.com/thymeleaf-iteration)
+  * Dhruv K - [Null Pointer Error Handling]() [resources used](https://attacomsian.com/blog/thymeleaf-handling-null-values)
+  * Dhruv S - [Javascript Integration for graphing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/stock.html) [resources used](https://visjs.github.io/vis-timeline/docs/graph2d/)
 
 ## Project Site
 Our project is live and operational at this link: [Nautilus](http://76.176.51.196/)
