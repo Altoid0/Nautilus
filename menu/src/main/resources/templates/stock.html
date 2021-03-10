@@ -4,11 +4,11 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="js/vis.js"></script>
-    <link rel ="stylesheet" href="css/weather.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <script src="js/vis.js"></script>
+     <!--<link rel ="stylesheet" href="css/weather.css">-->
 </head>
 <body>
 
@@ -55,27 +55,11 @@
                             <p th:text ="'Closed Price: ' +${closedStock}"></p>
                             <p th:text ="'Stock Price High: ' +${stockHi}"></p>
                             <p th:text ="'Stock Price Low: ' +${stockLo}"></p>
-                            <p th:text ="'Stock Price Low: ' +${openStock6}"></p>
                             <p id="test"></p>
-
-
-
+                            <p id="test2"></p>
 
                             <div id="visualization"></div>
-
                             <script th:inline="javascript">
-                                var ticker = document.getElementById("stockField").value;
-
-                                //  [object HTMLInputElement]
-                                var currentDate = new Date()
-
-                                var day1 = currentDate.getDate()-7
-                                var day2 = currentDate.getDate()-6
-                                var day3 = currentDate.getDate()-5
-                                var day4 = currentDate.getDate()-4
-                                var day5 = currentDate.getDate()-3
-                                var day6 = currentDate.getDate()-2
-
                                 var stockopen1 = [[${openStock1}]];
                                 var stockclose1 = [[${closedStock1}]];
                                 var stockhi1 = [[${stockHi1}]];
@@ -106,21 +90,39 @@
                                 var stockhi6 = [[${stockHi6}]];
                                 var stocklo6 = [[${stockLo6}]];
 
+                                document.getElementById("test").innerHTML = stockopen1;
+                                document.getElementById("test2").innerHTML = stockopen6;
 
+
+                            </script>
+
+
+                            <script>
+                                var ticker = document.getElementById("stockField").value;
+
+                                var currentDate = new Date()
+
+                                var day1 = currentDate.getDate()-7
+                                var day2 = currentDate.getDate()-6
+                                var day3 = currentDate.getDate()-5
+                                var day4 = currentDate.getDate()-4
+                                var day5 = currentDate.getDate()-3
+                                var day6 = currentDate.getDate()-2
 
                                 var month = currentDate.getMonth() + 1
                                 var month1 = month.toString()
                                 var year = currentDate.getFullYear()
                                 var date = year + "-" + "0" + month + "-" + "0" + day;
-                                var prevdate1 = year + "-" + "0" + month + "-" + "0" + (day1);
-                                var prevdate2 = year + "-" + "0" + month + "-" + "0" + (day2);
-                                var prevdate3 = year + "-" + "0" + month + "-" + "0" + (day3);
-                                var prevdate4 = year + "-" + "0" + month + "-" + "0" + (day4);
-                                var prevdate5 = year + "-" + "0" + month + "-" + "0" + (day5);
-                                var prevdate6 = year + "-" + "0" + month + "-" + "0" + (day6);
+                                var prevdate1 = year.toString() + "-" + "0" + month.toString() + "-" + "0" + (day1.toString());
+                                var prevdate2 = year.toString() + "-" + "0" + month.toString() + "-" + "0" + (day2.toString());
+                                var prevdate3 = year.toString() + "-" + "0" + month.toString() + "-" + "0" + (day3.toString());
+                                var prevdate4 = year.toString() + "-" + "0" + month.toString() + "-" + "0" + (day4.toString());
+                                var prevdate5 = year.toString() + "-" + "0" + month.toString() + "-" + "0" + (day5.toString());
+                                var prevdate6 = year.toString() + "-" + "0" + month.toString() + "-" + "0" + (day6.toString());
+                                //2021-03-09
+                            </script>
 
-                                document.getElementById("test").innerHTML = month1;
-
+                            <script>
                                 var container = document.getElementById('visualization');
                                 var items = [
                                     {x: prevdate1, y: stockopen1},
@@ -137,7 +139,6 @@
                                     end: prevdate5
                                 };
                                 var Graph2d = new vis.Graph2d(container, dataset, options);
-
                             </script>
                         </ul>
                     </form>
