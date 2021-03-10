@@ -11,20 +11,20 @@ Dhruv Sengupta | [@DaHippoBear](https://github.com/DaHippoBear) | [Tanay & Dhruv
 
 ## Technicals Involved
 * Gradle
-  * [Multiproject Builds](https://github.com/Altoid0/Nautilus/blob/master/settings.gradle)
-  * [Per Project Dependencies](https://github.com/Altoid0/Nautilus/blob/master/menu/build.gradle)
-  * [Google Calendar API](https://github.com/Altoid0/Nautilus/blob/master/calendar/src/main/Java/com/calendar/CalendarRequest.java)
-  * [Weather API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/ApiCall.java)
-  * [Stocks API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/StockEval.java)
-  * [News API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NewsCall.java)
+  * Tanay - [Multiproject Builds](https://github.com/Altoid0/Nautilus/blob/master/settings.gradle) [resources used]()
+  * Tanay - [Per Project Dependencies](https://github.com/Altoid0/Nautilus/blob/master/menu/build.gradle)
+  * Tanay - [Google Calendar API](https://github.com/Altoid0/Nautilus/blob/master/calendar/src/main/Java/com/calendar/CalendarRequest.java)
+  * Dhruv S - [Weather API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/ApiCall.java)
+  * Dhruv S - [Stocks API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/StockEval.java)
+  * Dhruv K - [News API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NewsCall.java)
 * SpringBoot
-  * [Page Routing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L20)
-  * [User Input to Backend](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L21)
+  * Dhruv K - [Page Routing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L20)
+  * Dhruv K - [User Input to Backend](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L21)
 * Thymeleaf
-  * [Iterative Loop Displays](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/calendar.html#L34)
-  * [Indexed Array Displays]()
-  * [Null Pointer Error Handling]()
-  * [Javascript Integration for graphing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/stock.html)
+  * Tanay - [Iterative Loop Displays](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/calendar.html#L34)
+  * Dhruv K - [Indexed Array Displays]()
+  * Dhruv K - [Null Pointer Error Handling]()
+  * Dhruv S - [Javascript Integration for graphing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/resources/templates/stock.html)
 
 ## Project Site
 Our project is live and operational at this link: [Nautilus](http://76.176.51.196/)
