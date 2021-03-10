@@ -126,8 +126,8 @@ public class NewsCall {
         articleinfo.add(articleC.get("title"));
         articleinfo.add(articleC.get("description"));
         articleinfo.add(articleC.get("url"));
-        articleinfo.add(articleC.get("publishedAt"));
         articleinfo.add(articleC.get("urlToImage"));
+        articleinfo.add(articleC.get("publishedAt"));
         articleinfo.add(articleC.get("content"));
         return articleinfo;
     }

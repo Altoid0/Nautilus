@@ -11,76 +11,86 @@
     <title>News</title>
 </head>
 <body>
-    <div class="col-sm-8 text-left">
-<!--        <div class="test">
-            <li th:text="${article1[0]} ?: '(no content)'"></li>
-            <li th:text="${article1[1]} ?: '(no content)'"></li>
-            <li th:text="${article1[2]} ?: '(no content)'"></li>
-            <li th:text="${article1[3]} ?: '(no content)'"></li>
-            <img th:src="${article1[4]} ?: '(no content)'">
-            <li th:text="${article1[5]} ?: '(no content)'"></li>
-            <li th:text="${article1[6]} ?: '(no content)'"></li>
-        </div>-->
-        <div class="container">
-            <img th:src="${article1[4]} ?: '(no content)'" class="image">
-            <div class="overlay">
-                <div class="text">Testing text</div>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="home" style="background-color: black;"><a href="./" style="color: white;" class="homeLink">Nautilus Home</a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+    <div class="content-wrapper">
+
+        <div class="news-card">
+            <a href="#" class="news-card__card-link"></a>
+            <img th:src="${article1[4]} ?: '(no content)'" class="news-card__image">
+            <div class="news-card__text-wrapper">
+                <h2 th:text="${article1[1]} ?: '(no content)'" class="news-card__title"></h2>
+                <div th:text="${article1[5]} ?: '(no content)'" class="news-card__post-date"></div>
+                <div class="news-card__details-wrapper">
+                    <p th:text="${article1[2]} ?: '(no content)'" class="news-card__excerpt">&hellip;</p>
+                    <a th:href="${article1[3]} ?: '(no content)'" class="news-card__read-more" target="_blank">Read more</a>
+                </div>
             </div>
         </div>
 
-        <div class="container">
-            <img th:src="${article2[4]} ?: '(no content)'" class="image">
-            <div class="overlay">
-                <div class="text">Testing text</div>
+        <div class="news-card">
+            <a href="#" class="news-card__card-link"></a>
+            <img th:src="${article2[4]} ?: '(no content)'" class="news-card__image">
+            <div class="news-card__text-wrapper">
+                <h2 th:text="${article2[1]} ?: '(no content)'" class="news-card__title"></h2>
+                <div th:text="${article2[5]} ?: '(no content)'" class="news-card__post-date"></div>
+                <div class="news-card__details-wrapper">
+                    <p th:text="${article2[2]} ?: '(no content)'" class="news-card__excerpt">&hellip;</p>
+                    <a th:href="${article2[3]} ?: '(no content)'" class="news-card__read-more" target="_blank">Read more</a>
+                </div>
             </div>
         </div>
 
-        <div class="container">
-            <img th:src="${article3[4]} ?: '(no content)'" class="image">
-            <div class="overlay">
-                <div class="text">Testing text</div>
+        <div class="news-card">
+            <a href="#" class="news-card__card-link"></a>
+            <img th:src="${article3[4]} ?: '(no content)'" class="news-card__image">
+            <div class="news-card__text-wrapper">
+                <h2 th:text="${article3[1]} ?: '(no content)'" class="news-card__title"></h2>
+                <div th:text="${article3[5]} ?: '(no content)'" class="news-card__post-date"></div>
+                <div class="news-card__details-wrapper">
+                    <p th:text="${article3[2]} ?: '(no content)'" class="news-card__excerpt">&hellip;</p>
+                    <a th:href="${article3[3]} ?: '(no content)'" class="news-card__read-more" target="_blank">Read more</a>
+                </div>
             </div>
         </div>
 
-        <div class="container">
-            <img th:src="${article4[4]} ?: '(no content)'" class="image">
-            <div class="overlay">
-                <div class="text">Testing text</div>
+        <div class="news-card">
+            <a href="#" class="news-card__card-link"></a>
+            <img th:src="${article4[4]} ?: '(no content)'" class="news-card__image">
+            <div class="news-card__text-wrapper">
+                <h2 th:text="${article4[1]} ?: '(no content)'" class="news-card__title"></h2>
+                <div th:text="${article4[5]} ?: '(no content)'" class="news-card__post-date"></div>
+                <div class="news-card__details-wrapper">
+                    <p th:text="${article4[2]} ?: '(no content)'" class="news-card__excerpt">&hellip;</p>
+                    <a th:href="${article4[3]} ?: '(no content)'" class="news-card__read-more" target="_blank">Read more</a>
+                </div>
             </div>
         </div>
 
-        <div class="container">
-            <img th:src="${article5[4]} ?: '(no content)'" class="image">
-            <div class="overlay">
-                <div class="text">Testing text</div>
+        <div class="news-card">
+            <a href="#" class="news-card__card-link"></a>
+            <img th:src="${article5[4]} ?: '(no content)'" class="news-card__image">
+            <div class="news-card__text-wrapper">
+                <h2 th:text="${article5[1]} ?: '(no content)'" class="news-card__title"></h2>
+                <div th:text="${article5[5]} ?: '(no content)'" class="news-card__post-date"></div>
+                <div class="news-card__details-wrapper">
+                    <p th:text="${article5[2]} ?: '(no content)'" class="news-card__excerpt">&hellip;</p>
+                    <a th:href="${article5[3]} ?: '(no content)'" class="news-card__read-more" target="_blank">Read more</a>
+                </div>
             </div>
         </div>
 
     </div>
-
-    <!--<div class="col-sm-8 text-left">
-        <div class="test">
-            <li th:text="${article2[0]} ?: '(no content)'"></li>
-            <li th:text="${article2[1]} ?: '(no content)'"></li>
-            <li th:text="${article2[2]} ?: '(no content)'"></li>
-            <li th:text="${article2[3]} ?: '(no content)'"></li>
-            <img th:src="${article2[4]} ?: '(no content)'">
-            <li th:text="${article2[5]} ?: '(no content)'"></li>
-            <li th:text="${article2[6]} ?: '(no content)'"></li>
-        </div>
-    </div>
-
-    <div class="col-sm-8 text-left">
-        <div class="test">
-            <li th:text="${article3[0]} ?: '(no content)'"></li>
-            <li th:text="${article3[1]} ?: '(no content)'"></li>
-            <li th:text="${article3[2]} ?: '(no content)'"></li>
-            <li th:text="${article3[3]} ?: '(no content)'"></li>
-            <img th:src="${article3[4]} ?: '(no content)'">
-            <li th:text="${article3[5]} ?: '(no content)'"></li>
-            <li th:text="${article3[6]} ?: '(no content)'"></li>
-        </div>
-    </div>-->
 
 
 
