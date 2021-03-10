@@ -15,7 +15,7 @@ Dhruv Sengupta | [@DaHippoBear](https://github.com/DaHippoBear) | [Tanay & Dhruv
   * Tanay - [Per Project Dependencies](https://github.com/Altoid0/Nautilus/blob/master/menu/build.gradle) | [resources used](https://spring.io/guides/gs/gradle/)
   * Tanay - Object Definition Inspired by CB - [Calendar](http://nautilus.viewdns.net/calendar) | [Google Calendar API with Custom Object Creation](https://github.com/Altoid0/Nautilus/blob/master/calendar/src/main/Java/com/calendar/CalendarRequest.java) | [resources used](https://developers.google.com/calendar/quickstart/java)
   * Dhruv S - [Weather](http://nautilus.viewdns.net/weather) | [Weather API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/ApiCall.java) | [resources used](https://openweathermap.org/current)
-  * Dhruv S - [Stocks](http://nautilus.viewdns.net/stocks) | [Stocks API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/StockEval.java) | [resources used](https://polygon.io/)
+  * Dhruv S - [Stocks](http://nautilus.viewdns.net/stock) | [Stocks API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/StockEval.java) | [resources used](https://polygon.io/)
   * Dhruv K/Gautam - [News](http://nautilus.viewdns.net/news) | [News API](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NewsCall.java) | [resources used](https://newsapi.org/)
 * SpringBoot
   * Dhruv K - Inspired by Techtalk - [Page Routing](https://github.com/Altoid0/Nautilus/blob/master/menu/src/main/java/com/nautilus/NautilusApplicationController.java#L20) | [resources used](https://github.com/nighthawkcoders/spring-idea/blob/master/src/main/java/com/example/lessons/controllers/_MainController.java)
