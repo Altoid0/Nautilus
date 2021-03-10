@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/news.css">
     <title>News</title>
 </head>
 <body>
     <div class="col-sm-8 text-left">
-        <div class="test">
+<!--        <div class="test">
             <li th:text="${article1[0]} ?: '(no content)'"></li>
             <li th:text="${article1[1]} ?: '(no content)'"></li>
             <li th:text="${article1[2]} ?: '(no content)'"></li>
@@ -20,10 +20,45 @@
             <img th:src="${article1[4]} ?: '(no content)'">
             <li th:text="${article1[5]} ?: '(no content)'"></li>
             <li th:text="${article1[6]} ?: '(no content)'"></li>
+        </div>-->
+        <div class="container">
+            <img th:src="${article1[4]} ?: '(no content)'" class="image">
+            <div class="overlay">
+                <div class="text">Testing text</div>
+            </div>
         </div>
+
+        <div class="container">
+            <img th:src="${article2[4]} ?: '(no content)'" class="image">
+            <div class="overlay">
+                <div class="text">Testing text</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <img th:src="${article3[4]} ?: '(no content)'" class="image">
+            <div class="overlay">
+                <div class="text">Testing text</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <img th:src="${article4[4]} ?: '(no content)'" class="image">
+            <div class="overlay">
+                <div class="text">Testing text</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <img th:src="${article5[4]} ?: '(no content)'" class="image">
+            <div class="overlay">
+                <div class="text">Testing text</div>
+            </div>
+        </div>
+
     </div>
 
-    <div class="col-sm-8 text-left">
+    <!--<div class="col-sm-8 text-left">
         <div class="test">
             <li th:text="${article2[0]} ?: '(no content)'"></li>
             <li th:text="${article2[1]} ?: '(no content)'"></li>
@@ -45,7 +80,7 @@
             <li th:text="${article3[5]} ?: '(no content)'"></li>
             <li th:text="${article3[6]} ?: '(no content)'"></li>
         </div>
-    </div>
+    </div>-->
 
 
 
